@@ -129,7 +129,7 @@ a {
 }
 
 .card > span > h3 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .card > span > h4 {
