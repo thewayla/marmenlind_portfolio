@@ -109,7 +109,8 @@ a {
 
 @media(min-width:38rem) {
   .cards {
-   grid-template-columns:1fr 1fr
+   grid-template-columns:1fr 1fr;
+   gap: 1.5rem;
   }
  }
 
