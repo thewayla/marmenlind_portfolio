@@ -85,6 +85,12 @@ a {
   max-width:var(--breakpoint-medium);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .header > a > img {
   margin-bottom: 3rem;
 }
