@@ -97,6 +97,7 @@ a {
 
 .intro {
   margin-bottom: 2rem;
+  max-width: 600px;
 }
 
 .intro > h1 {
