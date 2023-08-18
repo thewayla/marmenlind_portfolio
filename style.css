@@ -27,7 +27,6 @@ html {
  padding:0
 }
 
-ul,ol { list-style: none; }
 
 html {
   background-color: var(--color--background);
