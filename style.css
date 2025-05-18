@@ -344,4 +344,7 @@ div.vertical-line {
   section.about-me-container > section {
     flex-basis: 100%;
   }
+  section.about-me {
+    margin-bottom: 0;
+  }
 }
