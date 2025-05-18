@@ -9,11 +9,12 @@
   --color-text: var(--dark-grey);
   --color-link: var(--red);
   --color-border: #0000000a;
+  --color-hr: #cccccc;
 
   --font-family-primary: Helvetica, Arial, sans-serif;
 
   --body-padding: 1.5rem;
-  --content-max-width: 48rem;
+  --content-max-width: 72rem;
   --card-gap: 1.5rem;
   --header-bottom-margin: 3rem;
   --section-bottom-margin: 2rem;
@@ -42,7 +43,6 @@ html {
 body {
   font-family: var(--font-family-primary);
   color: var(--color-text);
-  padding: var(--body-padding);
   margin: 0 auto;
 }
 
@@ -120,19 +120,33 @@ strong, b {
 .wrapper {
   margin: 0 auto;
   max-width: var(--content-max-width);
+  padding: var(--body-padding);
 }
 
 .page-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-background);
+  border-bottom: 2px solid var(--color-hr);
+  z-index: 1000;
+  padding: calc(var(--body-padding)/2) 0;
+}
+
+.header-inner-content {
+  max-width: var(--content-max-width);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: var(--header-bottom-margin);
   flex-wrap: wrap;
-  gap: 1rem;
+  margin: 0 auto;
+  padding: 0 var(--body-padding);
 }
 
+
 .logo img {
-    height: 75px;
+    height: 60px;
     width: auto;
 }
 
@@ -203,7 +217,6 @@ main section:last-of-type {
 }
 
 .card img {
-    height: 40px;
     width: auto;
     margin-bottom: 1rem;
 }
@@ -286,20 +299,49 @@ main section:last-of-type {
   body {
     --body-padding: 3rem;
   }
+
 }
 
 .contact {
   margin-bottom: var(--section-bottom-margin);
 }
 
-hr.footer-separator {
+hr {
   border: none;
   height: 1px;
-  background-color: #cccccc;
+  background-color: var(--color-hr);
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
 footer.page-footer {
   margin-top: 0;
+}
+
+section.about-me-container {
+  display: flex;
+}
+
+section.about-me-container > section {
+  flex-basis: 50%;
+}
+
+div.vertical-line {
+  width: 1px;
+  border-left: 1px solid var(--color-hr);
+  margin: 0 1rem;
+  height: 24rem;
+  align-self: center;
+}
+
+@media (max-width: 38rem) {
+  .vertical-line {
+    display: none;
+  }
+  section.about-me-container {
+    flex-direction: column;
+  }
+  section.about-me-container > section {
+    flex-basis: 100%;
+  }
 }
