@@ -330,18 +330,16 @@ section.about-me-container > section {
   flex-basis: 50%;
 }
 
-div.vertical-line {
-  width: 1px;
-  border-left: 1px solid var(--color-hr);
-  margin: 0 1rem;
-  height: 24rem;
-  align-self: center;
+@media (min-width: 38rem) {
+  section.about-me-container > section:nth-child(3n) {
+    border-left: 1px solid var(--color-hr);
+    padding-left: var(--card-gap);
+    margin-left: var(--card-gap);
+  }
 }
 
+
 @media (max-width: 38rem) {
-  .vertical-line {
-    display: none;
-  }
   section.about-me-container {
     flex-direction: column;
   }
