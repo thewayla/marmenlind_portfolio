@@ -98,6 +98,10 @@ li:last-child {
     margin-bottom: 0;
 }
 
+.menuCards > li {
+  margin-bottom: 0;
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -219,6 +223,10 @@ main section:last-of-type {
 .card img {
     width: auto;
     margin-bottom: 1rem;
+}
+
+.menuCards > .card img {
+    margin-bottom: 0;
 }
 
 .card h3 {
