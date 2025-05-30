@@ -25,7 +25,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N53RNCM"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <header class="page-header">
+  <header class="page-header sticky top-0 bg-white shadow-md z-[60]"> 
     <div class="header-inner-content">
       <a href="index.html" class="logo">
         <img src="marmeno-logo.png" alt="Marmenlind logo">
@@ -43,10 +43,8 @@
     </div>
   </header>
   
-  <div>
-    
-
-
+  <div class="wrapper">
+    <div class="mainContent">
 
     <style>
         /* Styles specific to the infographic component */
@@ -63,7 +61,6 @@
             margin-left: auto;
             margin-right: auto;
             height: 300px; /* Default height */
-            /* max-height: 450px; /* Removed fixed max-height to allow responsiveness from chart.js options */
         }
         .infographic-component .flow-step {
             border: 2px solid #004731; /* primary-dark-green */
@@ -160,209 +157,211 @@
             border-radius: 0.25rem; 
             margin-top: 0.5rem; 
             font-weight: 500; 
+            min-height: 50px; /* Added to prevent layout shifts */
         }
     </style>
 
     <!-- 
-      Komponentens rot-ID är "infographicComponentRoot". Om du använder denna komponent flera gånger på samma sida,
-      se till att ändra detta ID för varje instans för att JavaScript ska fungera korrekt.
-      Samma gäller för canvas-elementets ID "forandringspotentialChart".
+      Component's root ID is "infographicComponentRoot_EN". If you use this component multiple times on the same page,
+      ensure to change this ID for each instance for the JavaScript to work correctly.
+      The same applies to the canvas element's ID "potentialChangeChart_EN".
     -->
-    <div class="infographic-component bg-gray-50 text-gray-800" id="infographicComponentRoot">
+    <div class="infographic-component text-gray-800" id="infographicComponentRoot_EN">
 
-        <header class="bg-[#004731] text-white p-8 text-center">
-            <h1 class="text-4xl font-bold">(Låtsas) Nudge case-study</h1>
-            <p class="text-xl mt-2">Öka Genomsnittligt Ordervärde (AOV) hos Sevans B2B Kunder</p>
-            <p class="text-sm mt-2">Hitte-på case gjord i kursen "LD1008 Tillämpad beteendevetenskap och lärande: Nudging och beslutsfattande 4,0 hp"
+        <header class="card text-[#004731] p-8 text-center">
+            <h1 class="text-4xl font-bold">(Fictional) Nudge Case Study</h1>
+            <p class="text-xl mt-2">Increase Average Order Value (AOV) for Sevan's B2B Customers</p>
+            <p class="text-xl mt-2">Fictional case made for the course "LD1008 Applied Behavioral Science and Learning: Nudging and Decision Making 4.0 hp"</p>
         </header>
 
-        <nav class="sticky top-[100px] bg-white shadow-md z-50 mb-8">
+        <nav class="sticky top-[124px] bg-white shadow-md z-50 mb-8" style="top: 124px !important;"> 
             <div class="container mx-auto px-4">
                 <div class="flex justify-center items-center space-x-2 md:space-x-4 py-3 overflow-x-auto">
-                    <a href="#steg1" class="nav-link">Steg 1</a>
-                    <a href="#steg2" class="nav-link">Steg 2</a>
-                    <a href="#steg3" class="nav-link">Steg 3</a>
-                    <a href="#steg4" class="nav-link">Steg 4</a>
+                    <a href="#step1_en" class="nav-link">Step 1</a>
+                    <a href="#step2_en" class="nav-link">Step 2</a>
+                    <a href="#step3_en" class="nav-link">Step 3</a>
+                    <a href="#step4_en" class="nav-link">Step 4</a>
                 </div>
             </div>
         </nav>
 
-        <div class="container mx-auto p-4 md:p-8"> <section id="steg1" class="mb-12">
-                <h2 class="section-title">Steg 1: Skapa en Beteendeutmaning</h2>
-                <p class="mb-6 text-lg text-gray-700">Det första steget i studien var att identifiera och definiera de centrala beteendeutmaningarna som Sevan stod inför. Detta lade grunden för att kunna fokusera insatserna där potentialen för positiv förändring var som störst.</p>
+        <div class="container mx-auto p-4 md:p-8"> 
+            <section id="step1_en" class="mb-12">
+                <h2 class="section-title">Step 1: Create a Behavioral Challenge</h2>
+                <p class="mb-6 text-lg text-gray-700">The first step in the study was to identify and define the central behavioral challenges Sevan faced. This laid the foundation for focusing efforts where the potential for positive change was greatest.</p>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 1: Beteendeutmaningar</h3>
-                    <p class="mb-4 text-gray-600">Initialt identifierades tre övergripande utmaningar:</p>
+                    <h3 class="subsection-title">Question 1: Behavioral Challenges</h3>
+                    <p class="mb-4 text-gray-600">Initially, three overarching challenges were identified:</p>
                     <div class="grid md:grid-cols-3 gap-6">
                         <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
                             <span class="text-4xl">🛒</span>
-                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">B2B E-handel</h4>
-                            <p class="mt-1 text-gray-700">Få B2B-kunder att lägga till fler kompletterande produkter eller beställa större volymer via datadrivna rekommendationer.</p>
+                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">B2B E-commerce</h4>
+                            <p class="mt-1 text-gray-700">Get B2B customers to add more complementary products or order larger volumes via data-driven recommendations.</p>
                         </div>
                         <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
                             <span class="text-4xl">🍲</span>
-                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">Receptinspiration (Retail)</h4>
-                            <p class="mt-1 text-gray-700">Inspirera butikskonsumenter via recept att köpa de Sevan-produkter som behövs.</p>
+                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">Recipe Inspiration (Retail)</h4>
+                            <p class="mt-1 text-gray-700">Inspire store consumers via recipes to buy the Sevan products needed.</p>
                         </div>
                         <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
                             <span class="text-4xl">🌍</span>
-                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">Miljösmarta Val (Retail)</h4>
-                            <p class="mt-1 text-gray-700">Få miljömedvetna konsumenter att aktivt välja Sevan genom att tydliggöra 'miljösmarta' egenskaper.</p>
+                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">Environmentally Smart Choices (Retail)</h4>
+                            <p class="mt-1 text-gray-700">Get environmentally conscious consumers to actively choose Sevan by clarifying 'environmentally smart' properties.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 2: Förändringspotential</h3>
-                    <p class="mb-4 text-gray-600">Utmaningarna utvärderades baserat på användarens motivation samt företagets förmåga och möjlighet att påverka beteendet. Detta gav en poängsumma för att prioritera.</p>
+                    <h3 class="subsection-title">Question 2: Potential for Change</h3>
+                    <p class="mb-4 text-gray-600">The challenges were evaluated based on user motivation and the company's ability and opportunity to influence behavior. This provided a score for prioritization.</p>
                     <div class="chart-container h-96 md:h-[450px]">
-                        <canvas id="forandringspotentialChart"></canvas>
+                        <canvas id="potentialChangeChart_EN"></canvas>
                     </div>
-                    <p class="mt-4 text-sm text-gray-600 text-center">Diagrammet visar den sammanlagda poängen (Motivation x Förmåga & Möjlighet) för varje beteendeutmaning.</p>
+                    <p class="mt-4 text-sm text-gray-600 text-center">The chart shows the total score (Motivation x Ability & Opportunity) for each behavioral challenge.</p>
                 </div>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 3: Projektmål baserat på Förändringspotential</h3>
-                    <p class="mb-4 text-gray-600">Utmaningen "Öka AOV genom kompletterande produkter/volym (B2B)" valdes på grund av hög potential och bäst mätbarhet.</p>
+                    <h3 class="subsection-title">Question 3: Project Goal Based on Potential for Change</h3>
+                    <p class="mb-4 text-gray-600">The challenge "Increase AOV through complementary products/volume (B2B)" was chosen due to high potential and best measurability.</p>
                     
                     <div class="bg-[#D1E7DD] p-6 rounded-lg shadow mb-6">
-                        <h4 class="font-semibold text-xl text-[#004731] mb-2">Vald Beteendeutmaning:</h4>
+                        <h4 class="font-semibold text-xl text-[#004731] mb-2">Chosen Behavioral Challenge:</h4>
                         <blockquote class="text-gray-700 italic border-l-4 border-[#004731] pl-4">
-                            "Hur ska vi få våra B2B-kunder som lägger en order att lägga till fler kompletterande Sevan-produkter eller beställa större volymer baserat på datadrivna och relevanta rekommendationer (t.ex. produktparningar, volymfördelar) under orderläggningsprocessen på vår B2B e-handelsplattform?"
+                            "How can we get our B2B customers who place an order to add more complementary Sevan products or order larger volumes based on data-driven and relevant recommendations (e.g., product pairings, volume benefits) during the order placement process on our B2B e-commerce platform?"
                         </blockquote>
                     </div>
 
-                    <h4 class="font-semibold text-xl text-[#004731] mb-3">Konkret Projektmål:</h4>
+                    <h4 class="font-semibold text-xl text-[#004731] mb-3">Concrete Project Goal:</h4>
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div class="stat-card bg-[#004731]"> 
                             <div class="stat-number">8%</div>
-                            <div class="stat-label">Ökning i AOV (Mål)</div>
+                            <div class="stat-label">Increase in AOV (Target)</div>
                         </div>
                         <div class="stat-card bg-[#004731]">
-                            <div class="stat-number">6 Mån</div>
-                            <div class="stat-label">Testperiod (Q1-Q2 2026)</div>
+                            <div class="stat-number">6 Mon</div>
+                            <div class="stat-label">Test Period (Q1-Q2 2026)</div>
                         </div>
                     </div>
-                    <div class="flow-step">Införande av ny datadriven rekommendationsmotor på Sevans B2B e-handelsplattform.</div>
+                    <div class="flow-step">Introduction of a new data-driven recommendation engine on Sevan's B2B e-commerce platform.</div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step">Under en 6-månaders testperiod (Q1-Q2 2026).</div>
+                    <div class="flow-step">During a 6-month test period (Q1-Q2 2026).</div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step">Öka genomsnittligt ordervärde (AOV) med 8% för kunder som interagerar med rekommendationerna.</div>
+                    <div class="flow-step">Increase average order value (AOV) by 8% for customers who interact with the recommendations.</div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step">Mäta andelen ordrar som innehåller minst en rekommenderad produkt.</div>
+                    <div class="flow-step">Measure the proportion of orders containing at least one recommended product.</div>
                 </div>
             </section>
             
-            <section id="steg2" class="mb-12">
-                <h2 class="section-title">Steg 2: Förstå Användarens Verklighet</h2>
-                <p class="mb-6 text-lg text-gray-700">För att designa effektiva nudges krävdes en djupare förståelse för B2B-kundernas nuvarande beteenden, drivkrafter och hinder i e-handelsmiljön.</p>
+            <section id="step2_en" class="mb-12">
+                <h2 class="section-title">Step 2: Understand the User's Reality</h2>
+                <p class="mb-6 text-lg text-gray-700">To design effective nudges, a deeper understanding of B2B customers' current behaviors, drivers, and barriers in the e-commerce environment was required.</p>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 4: Insamlingsmetoder</h3>
-                    <p class="mb-4 text-gray-600">Två primära metoder användes för att samla in data:</p>
+                    <h3 class="subsection-title">Question 4: Data Collection Methods</h3>
+                    <p class="mb-4 text-gray-600">Two primary methods were used to collect data:</p>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="bg-[#E6F0EB] p-6 rounded-lg border border-[#A7D7C5]">
-                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">📊</span>Analys av Transaktionsdata (Kvantitativ)</h4>
-                            <p class="text-gray-700">Systematisk analys av orderhistorik, interaktionsdata med rekommendationssystem (klick, konvertering) och kundsegmenteringsdata från B2B-plattformen.</p>
-                            <p class="mt-2 text-sm text-[#004731] font-medium">Motivering: Ger hårda, kvantitativa data på faktiskt köpbeteende och möjliggör A/B-testning.</p>
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">📊</span>Analysis of Transaction Data (Quantitative)</h4>
+                            <p class="text-gray-700">Systematic analysis of order history, interaction data with recommendation systems (clicks, conversion), and customer segmentation data from the B2B platform.</p>
+                            <p class="mt-2 text-sm text-[#004731] font-medium">Rationale: Provides hard, quantitative data on actual purchasing behavior and enables A/B testing.</p>
                         </div>
                         <div class="bg-[#E6F0EB] p-6 rounded-lg border border-[#A7D7C5]">
-                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">🗣️</span>Kvalitativa Intervjuer (Kvalitativ)</h4>
-                            <p class="text-gray-700">Semistrukturerade intervjuer med ett urval av B2B-kunder (inköpsansvariga) för att förstå *varför* bakom deras agerande och upplevelser av systemet.</p>
-                            <p class="mt-2 text-sm text-[#004731] font-medium">Motivering: Ger djupgående insikter om upplevd relevans, hinder och motivationsfaktorer.</p>
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">🗣️</span>Qualitative Interviews</h4>
+                            <p class="text-gray-700">Semi-structured interviews with a selection of B2B customers (purchasing managers) to understand the *why* behind their actions and experiences with the system.</p>
+                            <p class="mt-2 text-sm text-[#004731] font-medium">Rationale: Provides in-depth insights into perceived relevance, barriers, and motivating factors.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 5: Beteendeinsikter, Hinder, Motiverare & Beslutssituationer</h3>
-                    <p class="mb-4 text-gray-600">Analysen resulterade i flera nyckelinsikter:</p>
+                    <h3 class="subsection-title">Question 5: Behavioral Insights, Barriers, Motivators & Decision Situations</h3>
+                    <p class="mb-4 text-gray-600">The analysis resulted in several key insights:</p>
                     <div class="mb-6 p-4 bg-[#E6F0EB] rounded-lg">
-                        <h4 class="font-semibold text-lg text-[#006A4E] mb-1">Potentiella Beteendeinsikter:</h4>
+                        <h4 class="font-semibold text-lg text-[#006A4E] mb-1">Potential Behavioral Insights:</h4>
                         <ul class="list-disc list-inside text-gray-700 space-y-1">
-                            <li>Branschspecifika produktparningar & rekommendationer med tydliga ekonomiska fördelar (t.ex. volymrabatter) kan ha högst konvertering.</li>
-                            <li>Tidsbesparing & upptäckt av genuint relevanta nya produkter uppskattas.</li>
-                            <li>Klick utan köp kan bero på pris, osäkerhet eller att behovet inte är omedelbart.</li>
+                            <li>Industry-specific product pairings & recommendations with clear economic benefits (e.g., volume discounts) may have the highest conversion.</li>
+                            <li>Time savings & discovery of genuinely relevant new products are appreciated.</li>
+                            <li>Clicks without purchase may be due to price, uncertainty, or non-immediate need.</li>
                         </ul>
                     </div>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="bg-red-50 p-4 rounded-lg border border-red-300">
-                            <h4 class="font-semibold text-lg text-red-700 mb-1"><span class="text-xl mr-1">❗</span>Hinder:</h4>
+                            <h4 class="font-semibold text-lg text-red-700 mb-1"><span class="text-xl mr-1">❗</span>Barriers:</h4>
                             <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li>Upplevd irrelevans av rekommendationer.</li>
-                                <li>Misstro mot systemets avsikter.</li>
-                                <li>Rörig användarupplevelse (UX).</li>
-                                <li>Befintliga budget- och inköpsrutiner.</li>
+                                <li>Perceived irrelevance of recommendations.</li>
+                                <li>Distrust of the system's intentions.</li>
+                                <li>Cluttered user experience (UX).</li>
+                                <li>Existing budget and purchasing routines.</li>
                             </ul>
                         </div>
                         <div class="bg-[#E6F0EB] p-4 rounded-lg border border-[#A7D7C5]">
-                            <h4 class="font-semibold text-lg text-[#004731] mb-1"><span class="text-xl mr-1">👍</span>Motiverare:</h4>
+                            <h4 class="font-semibold text-lg text-[#004731] mb-1"><span class="text-xl mr-1">👍</span>Motivators:</h4>
                             <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li>Tydlig nytta (tidsbesparing, kostnadsbesparing).</li>
-                                <li>Förenklad beslutsprocess.</li>
-                                <li>Hjälp att tillgodose egna kunders behov.</li>
+                                <li>Clear benefit (time saving, cost saving).</li>
+                                <li>Simplified decision-making process.</li>
+                                <li>Help in meeting their own customers' needs.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="mt-6 bg-[#FEF9C3] p-4 rounded-lg border border-[#FDE047]">
-                        <h4 class="font-semibold text-lg text-[#B45309] mb-1"><span class="text-xl mr-1">🎯</span>Effektiva Beslutssituationer för Rekommendationer:</h4>
+                        <h4 class="font-semibold text-lg text-[#B45309] mb-1"><span class="text-xl mr-1">🎯</span>Effective Decision Situations for Recommendations:</h4>
                         <ul class="list-disc list-inside text-gray-700 space-y-1">
-                            <li>När kunder nästan slutfört sin order ("glöm inte"-varor).</li>
-                            <li>När de aktivt väljer nyckelprodukter ("komplettera lösningen med").</li>
-                            <li>När de är nära en förmånsgräns (rabatt, fri frakt).</li>
+                            <li>When customers have almost completed their order ("don't forget" items).</li>
+                            <li>When they are actively selecting key products ("complete the solution with").</li>
+                            <li>When they are close to a benefit threshold (discount, free shipping).</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <section id="steg3" class="mb-12">
-                <h2 class="section-title">Steg 3: Skapa Beteendeinsatser (Nudges)</h2>
-                <p class="mb-6 text-lg text-gray-700">Baserat på insikterna om användarnas verklighet utvecklades flera potentiella nudginginsatser. Dessa utvärderades sedan för att välja den mest lovande.</p>
+            <section id="step3_en" class="mb-12">
+                <h2 class="section-title">Step 3: Create Behavioral Interventions (Nudges)</h2>
+                <p class="mb-6 text-lg text-gray-700">Based on insights into the users' reality, several potential nudging interventions were developed. These were then evaluated to select the most promising one.</p>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 6: Potentiella Nudginginsatser</h3>
+                    <h3 class="subsection-title">Question 6: Potential Nudging Interventions</h3>
                     <div class="grid md:grid-cols-3 gap-6">
                         <div class="bg-[#E6F0EB] p-6 rounded-lg shadow">
-                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">🎁</span>1. Smarta Paketförslag</h4>
-                            <p class="text-gray-700 mb-2">Presentera genomtänkta produktkombinationer (t.ex. "Komplett Meze-startpaket") när en nyckelprodukt läggs i varukorgen. Kan erbjudas med paketfördel.</p>
-                            <strong class="text-sm text-[#004731]">Nudgeverktyg:</strong>
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">🎁</span>1. Smart Bundle Suggestions</h4>
+                            <p class="text-gray-700 mb-2">Present well-thought-out product combinations (e.g., "Complete Meze Starter Pack") when a key product is added to the cart. Can be offered with a bundle benefit.</p>
+                            <strong class="text-sm text-[#004731]">Nudge Tools:</strong>
                             <ul class="list-disc list-inside text-xs text-gray-600 mt-1">
-                                <li>Rama in informationen ("enkel lösning")</li>
-                                <li>Visa vägen (mot komplett beställning)</li>
-                                <li>Förändra placeringen (relevant tillfälle)</li>
+                                <li>Frame information ("easy solution")</li>
+                                <li>Show the way (towards a complete order)</li>
+                                <li>Change placement (relevant timing)</li>
                             </ul>
                         </div>
                         <div class="bg-[#D1E7DD] p-6 rounded-lg shadow ring-2 ring-[#004731]"> 
-                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">📈</span>2. Volymfördel Synliggjord</h4>
-                            <p class="text-gray-700 mb-2">Synliggör dynamiskt volymrabatter när kund anger antal (t.ex. "Lägg till Y st till för Z% rabatt!"). Pris per enhet uppdateras.</p>
-                            <strong class="text-sm text-[#004731]">Nudgeverktyg:</strong>
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">📈</span>2. Volume Benefit Visualized</h4>
+                            <p class="text-gray-700 mb-2">Dynamically visualize volume discounts when the customer enters quantity (e.g., "Add Y more items for Z% discount!"). Price per unit updates.</p>
+                            <strong class="text-sm text-[#004731]">Nudge Tools:</strong>
                             <ul class="list-disc list-inside text-xs text-gray-600 mt-1">
-                                <li>Synliggör effekten (ekonomisk fördel)</li>
-                                <li>Ge återkoppling (omedelbar prisändring)</li>
-                                <li>Rama in informationen ("smartare köp")</li>
+                                <li>Visualize the effect (economic benefit)</li>
+                                <li>Provide feedback (immediate price change)</li>
+                                <li>Frame information ("smarter purchase")</li>
                             </ul>
                         </div>
                         <div class="bg-[#E6F0EB] p-6 rounded-lg shadow">
-                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">👍</span>3. Kollektivt Validerade Komplement</h4>
-                            <p class="text-gray-700 mb-2">Visa vilka andra produkter som ofta köps tillsammans av liknande kunder (t.ex. "Restauranger som köpte X beställde ofta Y").</p>
-                            <strong class="text-sm text-[#004731]">Nudgeverktyg:</strong>
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">👍</span>3. Collectively Validated Complements</h4>
+                            <p class="text-gray-700 mb-2">Show which other products are often bought together by similar customers (e.g., "Restaurants that bought X often ordered Y").</p>
+                            <strong class="text-sm text-[#004731]">Nudge Tools:</strong>
                             <ul class="list-disc list-inside text-xs text-gray-600 mt-1">
-                                <li>Ge socialt bevis</li>
-                                <li>Visa vägen (beprövade kombinationer)</li>
+                                <li>Provide social proof</li>
+                                <li>Show the way (proven combinations)</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 7: GAME Utvärdering och Prioritering</h3>
-                    <p class="mb-4 text-gray-600">Nudgeinsatserna utvärderades enligt GAME-ramverket (Genomförbarhet, Användarfokuserad, Mätbarhet, Etisk).</p>
+                    <h3 class="subsection-title">Question 7: GAME Evaluation and Prioritization</h3>
+                    <p class="mb-4 text-gray-600">The nudge interventions were evaluated according to the GAME framework (Goal, Actionable, Measurable, Ethical).</p>
                     <div class="overflow-x-auto">
                         <table class="min-w-full bg-white border border-[#A7D7C5]">
                             <thead class="bg-[#006A4E] text-white">
                                 <tr>
-                                    <th class="py-3 px-4 text-left">Nudgeinsats</th>
+                                    <th class="py-3 px-4 text-left">Nudge Intervention</th>
                                     <th class="py-3 px-4 text-center">G</th>
                                     <th class="py-3 px-4 text-center">A</th>
                                     <th class="py-3 px-4 text-center">M</th>
@@ -371,181 +370,172 @@
                             </thead>
                             <tbody class="text-gray-700">
                                 <tr class="border-b border-[#C1D8CF]">
-                                    <td class="py-3 px-4">1. Smarta Paketförslag</td>
-                                    <td class="py-3 px-4 text-center bg-yellow-100">Medel</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4">1. Smart Bundle Suggestions</td>
+                                    <td class="py-3 px-4 text-center bg-yellow-100">Medium</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
                                 </tr>
                                 <tr class="border-b border-[#C1D8CF] bg-[#E6F0EB] font-semibold">
-                                    <td class="py-3 px-4">2. Volymfördel Synliggjord</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4">2. Volume Benefit Visualized</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
                                 </tr>
                                 <tr class="border-b border-[#C1D8CF]">
-                                    <td class="py-3 px-4">3. Kollektivt Validerade Komplement</td>
-                                    <td class="py-3 px-4 text-center bg-yellow-100">Medel</td>
-                                    <td class="py-3 px-4 text-center bg-orange-100">Medel-Hög</td>
-                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
-                                    <td class="py-3 px-4 text-center bg-orange-100">Medel-Hög</td>
+                                    <td class="py-3 px-4">3. Collectively Validated Complements</td>
+                                    <td class="py-3 px-4 text-center bg-yellow-100">Medium</td>
+                                    <td class="py-3 px-4 text-center bg-orange-100">Med-High</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">High</td>
+                                    <td class="py-3 px-4 text-center bg-orange-100">Med-High</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="mt-4 text-gray-600"><strong>Prioritering:</strong> "Volymfördel Synliggjord" (Nudge 2) framstod som starkast, följt av "Smarta Paketförslag" (Nudge 1).</p>
+                    <p class="mt-4 text-gray-600"><strong>Prioritization:</strong> "Volume Benefit Visualized" (Nudge 2) emerged as the strongest, followed by "Smart Bundle Suggestions" (Nudge 1).</p>
                 </div>
             </section>
 
-            <section id="steg4" class="mb-12">
-                <h2 class="section-title">Steg 4: Vald Beteendeinsats & Studiedesign</h2>
-                <p class="mb-6 text-lg text-gray-700">Baserat på utvärderingen valdes en specifik nudge för implementering och testning. En detaljerad design och en konkret studieplan formulerades.</p>
+            <section id="step4_en" class="mb-12">
+                <h2 class="section-title">Step 4: Chosen Behavioral Intervention & Study Design</h2>
+                <p class="mb-6 text-lg text-gray-700">Based on the evaluation, a specific nudge was chosen for implementation and testing. A detailed design and a concrete study plan were formulated.</p>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 8: Val av Beteendeinsats - "Volymfördel Synliggjord"</h3>
-                    <p class="mb-4 text-gray-600">Denna nudge syftar till att transparent och uppmuntrande visa B2B-kunder hur de kan uppnå bättre priser genom att beställa större volymer.</p>
+                    <h3 class="subsection-title">Question 8: Choice of Behavioral Intervention - "Volume Benefit Visualized"</h3>
+                    <p class="mb-4 text-gray-600">This nudge aims to transparently and encouragingly show B2B customers how they can achieve better prices by ordering larger volumes.</p>
                     
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
-                            <h4 class="font-semibold text-lg text-[#006A4E] mb-2">Mock-up: På Produktsidan</h4>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mb-2">Mock-up: On Product Page (Interactive)</h4>
                             <div class="mock-ui-element">
-                                <div class="mock-ui-label">Produkt: Hummus Klassisk 1kg</div>
+                                <div class="mock-ui-label">Product: Hummus Original 1kg</div>
                                 <div class="flex items-center space-x-2">
-                                    <span class="mock-ui-label">Antal:</span>
-                                    <input type="number" value="5" class="mock-ui-input">
-                                    <span class="mock-ui-label">st</span>
+                                    <span class="mock-ui-label">Quantity:</span>
+                                    <input type="number" value="5" class="mock-ui-input" id="hummusQuantityInput_EN" min="0">
+                                    <span class="mock-ui-label">pcs</span>
                                 </div>
-                                <div class="mock-ui-dynamic-text">
-                                    5 st i varukorgen. Lägg till 5 st till för att sänka priset till 90 kr/st och spara 50 kr!
-                                </div>
+                                <div class="mock-ui-dynamic-text" id="hummusDynamicText_EN">
+                                    </div>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-                                    <div class="bg-[#006A4E] h-2.5 rounded-full" style="width: 50%"></div>
+                                    <div class="bg-[#006A4E] h-2.5 rounded-full" id="hummusProgressBar_EN" style="width: 50%"></div>
                                 </div>
-                                <p class="text-xs text-gray-500 mt-1">Progress mot nästa rabattnivå.</p>
+                                <p class="text-xs text-gray-500 mt-1">Progress towards the next discount level.</p>
                             </div>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-lg text-[#006A4E] mb-2">Mock-up: I Varukorgen</h4>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mb-2">Mock-up: In Shopping Cart</h4>
                             <div class="mock-ui-element">
-                                <div class="mock-ui-label">Produkt: Olivolja Extra Virgin 5L</div>
+                                <div class="mock-ui-label">Product: Olive Oil Extra Virgin 5L</div>
                                 <div class="flex items-center">
                                     <span class="text-2xl text-yellow-500 mr-2">💰</span>
-                                    <p class="mock-ui-dynamic-text text-sm">Spara mer! Nästa prisnivå vid 10 st.</p>
+                                    <p class="mock-ui-dynamic-text text-sm">Save more! Next price level at 10 pcs.</p>
                                 </div>
-                                <p class="text-xs text-gray-500 mt-1">Klicka för att se detaljer eller ändra antal.</p>
+                                <p class="text-xs text-gray-500 mt-1">Click to see details or change quantity.</p>
                             </div>
                             <div class="mock-ui-element mt-4">
-                                <div class="mock-ui-label font-bold text-[#004731]">Ordersummering</div>
-                                <p class="text-green-600 font-semibold">Du sparar 150 kr genom volymköp!</p>
+                                <div class="mock-ui-label font-bold text-[#004731]">Order Summary</div>
+                                <p class="text-green-600 font-semibold">You save 150 SEK through volume purchases!</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-x-6">
                         <div>
-                            <h4 class="font-semibold text-lg text-[#006A4E] mt-4 mb-1">Nyckeldetaljer i Designen:</h4>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mt-4 mb-1">Key Design Details:</h4>
                             <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li><strong>Syfte:</strong> Transparent visa prisfördelar vid större volymer.</li>
-                                <li><strong>Interaktionsflöde:</strong> Direkt synlig, omedelbar återkoppling.</li>
-                                <li><strong>Tonalitet:</strong> Positiv, hjälpsam ("Optimera ditt inköp!").</li>
-                                <li><strong>Tekniskt:</strong> Kräver korrekta volymprislistor, frontend-logik.</li>
+                                <li><strong>Purpose:</strong> Transparently show price benefits for larger volumes.</li>
+                                <li><strong>Interaction Flow:</strong> Directly visible, immediate feedback.</li>
+                                <li><strong>Tonality:</strong> Positive, helpful ("Optimize your purchase!").</li>
+                                <li><strong>Technical:</strong> Requires correct volume price lists, frontend logic.</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-lg text-[#006A4E] mt-4 mb-1">Mätpunkter för Framgång (utöver AOV):</h4>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mt-4 mb-1">Success Metrics (beyond AOV):</h4>
                             <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li>Andel ordrar med volymrabatterat pris.</li>
-                                <li>Genomsnittlig ökning i antal enheter/produkt med volymrabatt.</li>
-                                <li>Klickfrekvens på "visa mer info om rabatt".</li>
-                                <li>Kundfeedback (enkäter) om nytta och tydlighet.</li>
+                                <li>Proportion of orders with volume-discounted prices.</li>
+                                <li>Average increase in units/product with volume discount.</li>
+                                <li>Click-through rate on "show more info about discount".</li>
+                                <li>Customer feedback (surveys) on utility and clarity.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 9: Beskrivning av Mätning</h3>
-                    <p class="mb-4 text-gray-600">Effekten av "Volymfördel Synliggjord"-nudgen kommer att mätas noggrant:</p>
-                    <div class="flow-step"><strong>Primära Mått:</strong><br/>1. Genomsnittlig beställd kvantitet/produktartikel.<br/>2. Andel ordrar som utnyttjar volymrabatt.<br/><em>(Mäts via backend-orderdata)</em></div>
+                    <h3 class="subsection-title">Question 9: Description of Measurement</h3>
+                    <p class="mb-4 text-gray-600">The effect of the "Volume Benefit Visualized" nudge will be carefully measured:</p>
+                    <div class="flow-step"><strong>Primary Metrics:</strong><br/>1. Average ordered quantity/product item.<br/>2. Proportion of orders utilizing volume discount.<br/><em>(Measured via backend order data)</em></div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step"><strong>Sekundära Mått:</strong><br/>1. Påverkan på total AOV.<br/>2. Interaktionsgrad med nudge-elementet.<br/><em>(Mäts via plattformsloggar)</em></div>
+                    <div class="flow-step"><strong>Secondary Metrics:</strong><br/>1. Impact on total AOV.<br/>2. Interaction rate with the nudge element.<br/><em>(Measured via platform logs)</em></div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step"><strong>Implementering:</strong><br/>Direkt på produktsidor (vid kvantitetsfält) och i varukorgen.</div>
+                    <div class="flow-step"><strong>Implementation:</strong><br/>Directly on product pages (at quantity field) and in the shopping cart.</div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step"><strong>Utvärdering: A/B-test</strong><br/>Testgrupp (exponeras för nudge) vs. Kontrollgrupp (befintligt gränssnitt).</div>
+                    <div class="flow-step"><strong>Evaluation: A/B Test</strong><br/>Test group (exposed to nudge) vs. Control group (existing interface).</div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step"><strong>Tidsperiod:</strong> 3 månader.</div>
+                    <div class="flow-step"><strong>Time Period:</strong> 3 months.</div>
                 </div>
 
                 <div class="card">
-                    <h3 class="subsection-title">Fråga 10: Hypotes</h3>
-                    <p class="mb-1 text-gray-600">Hypotesen är att nudgen kommer att leda till att B2B-kunder i testgruppen ökar sina beställningsvolymer och oftare utnyttjar volymrabatter.</p>
+                    <h3 class="subsection-title">Question 10: Hypothesis</h3>
+                    <p class="mb-1 text-gray-600">The hypothesis is that the nudge will lead B2B customers in the test group to increase their order volumes and more frequently utilize volume discounts.</p>
                     
                     <div class="bg-[#D1E7DD] p-6 rounded-lg shadow mb-6 mt-4">
-                        <h4 class="font-semibold text-xl text-[#004731] mb-2 text-center">Specifika Förväntningar (vs. Kontrollgrupp, 3 månader):</h4>
+                        <h4 class="font-semibold text-xl text-[#004731] mb-2 text-center">Specific Expectations (vs. Control Group, 3 months):</h4>
                         <div class="grid md:grid-cols-2 gap-4">
                             <div class="stat-card bg-[#006A4E]">
-                                <div class="stat-number">&ge;10%</div>
-                                <div class="stat-label">Ökning i genomsnittlig beställd kvantitet (för produkter med nudge)</div>
+                                <div class="stat-number">≥10%</div>
+                                <div class="stat-label">Increase in average ordered quantity (for products with nudge)</div>
                             </div>
                             <div class="stat-card bg-[#006A4E]">
-                                <div class="stat-number">&ge;5<span class="text-2xl">pp</span></div>
-                                <div class="stat-label">Ökning i andel ordrar som aktiverar volymrabatt</div>
+                                <div class="stat-number">≥5<span class="text-2xl">pp</span></div>
+                                <div class="stat-label">Increase in proportion of orders activating volume discount</div>
                             </div>
                         </div>
-                        <p class="text-center mt-3 text-[#004731] font-medium">En positiv, mätbar effekt på det totala genomsnittliga ordervärdet (AOV) förväntas också.</p>
+                        <p class="text-center mt-3 text-[#004731] font-medium">A positive, measurable effect on the total average order value (AOV) is also expected.</p>
                     </div>
 
-                    <h4 class="font-semibold text-lg text-yellow-700 mb-2"><span class="text-2xl mr-2">⚠️</span>Potentiella Faktorer/Confounders:</h4>
+                    <h4 class="font-semibold text-lg text-yellow-700 mb-2"><span class="text-2xl mr-2">⚠️</span>Potential Confounding Factors:</h4>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
-                            <h5 class="font-semibold text-yellow-600">1. Externa Marknadsförändringar</h5>
+                            <h5 class="font-semibold text-yellow-600">1. External Market Changes</h5>
                             <ul class="list-disc list-inside text-sm text-gray-700">
-                                <li>Oväntade skiften i råvarupriser.</li>
-                                <li>Aggressiva kampanjer från konkurrenter.</li>
-                                <li>Signifikanta förändringar i kundernas branscher.</li>
+                                <li>Unexpected shifts in raw material prices.</li>
+                                <li>Aggressive campaigns from competitors.</li>
+                                <li>Significant changes in customers' industries.</li>
                             </ul>
                         </div>
                         <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
-                            <h5 class="font-semibold text-yellow-600">2. Andra Samtidiga Sevan-initiativ</h5>
+                            <h5 class="font-semibold text-yellow-600">2. Other Concurrent Sevan Initiatives</h5>
                             <ul class="list-disc list-inside text-sm text-gray-700">
-                                <li>Andra stora försäljningskampanjer.</li>
-                                <li>Produktlanseringar med egna starka incitament.</li>
-                                <li>Stora ändringar i e-handelsplattformen.</li>
+                                <li>Other major sales campaigns.</li>
+                                <li>Product launches with their own strong incentives.</li>
+                                <li>Major changes to the e-commerce platform.</li>
                             </ul>
                         </div>
                     </div>
-                    <p class="mt-3 text-sm text-gray-600">Dessa faktorer kan göra det svårt att isolera den specifika effekten av just "Volymfördel Synliggjord"-nudgen.</p>
+                    <p class="mt-3 text-sm text-gray-600">These factors can make it difficult to isolate the specific effect of the "Volume Benefit Visualized" nudge.</p>
                 </div>
             </section>
-
         </div>
 
         <script>
         (function() {
             // This IIFE (Immediately Invoked Function Expression) helps to avoid polluting the global scope.
             
-            // Get the root element of this component. 
-            // Important: If you use multiple instances of this component on the same page, 
-            // ensure "infographicComponentRoot" ID is unique for each, or use a class selector 
-            // and ensure this script is correctly associated with its specific component instance.
-            const componentRoot = document.getElementById('infographicComponentRoot');
+            const componentRoot = document.getElementById('infographicComponentRoot_EN'); // Use the English version ID
             
             if (!componentRoot) {
-                // console.error("Infographic component root 'infographicComponentRoot' not found. Scripts cannot run.");
-                // It's possible the script is running before the element is in the DOM if not placed at the end.
-                // Or, if this component is loaded dynamically, ensure this script runs after the component is added.
                 return;
             }
 
             // Chart.js initialization
-            const chartElement = componentRoot.querySelector('#forandringspotentialChart');
+            const chartElement = componentRoot.querySelector('#potentialChangeChart_EN'); // Use the English version ID
             if (chartElement) {
-                const forandringspotentialCtx = chartElement.getContext('2d');
+                const potentialChangeCtx = chartElement.getContext('2d');
                 
                 function wrapLabel(str, maxWidth) {
-                    if (!str) return ''; // Handle undefined or null strings
+                    if (!str) return ''; 
                     if (str.length <= maxWidth) {
                         return str;
                     }
@@ -565,39 +555,39 @@
                 }
 
                 try {
-                    new Chart(forandringspotentialCtx, {
+                    new Chart(potentialChangeCtx, {
                         type: 'bar',
                         data: {
                             labels: [
-                                wrapLabel('Öka AOV (B2B)', 16), 
-                                wrapLabel('Inspirera via Recept (Retail)', 20), 
-                                wrapLabel('Fokusera Miljösmart (Retail)', 20)  
+                                wrapLabel('Increase AOV (B2B)', 16), 
+                                wrapLabel('Inspire via Recipes (Retail)', 20), 
+                                wrapLabel('Focus Environmentally Smart (Retail)', 20)  
                             ],
                             datasets: [{
-                                label: 'Förändringspotential (Poäng)',
+                                label: 'Potential for Change (Score)',
                                 data: [56, 56, 48],
                                 backgroundColor: [
-                                    '#006A4E', // medium-green
-                                    '#A7D7C5', // light-mint-green
-                                    '#D4A017'  // accent-gold 
+                                    '#006A4E', 
+                                    '#A7D7C5', 
+                                    '#D4A017'  
                                 ],
                                 borderColor: [
-                                    '#004731', // primary-dark-green
-                                    '#006A4E', // medium-green
-                                    '#A7D7C5'  // light-mint-green
+                                    '#004731', 
+                                    '#006A4E', 
+                                    '#A7D7C5'  
                                 ],
                                 borderWidth: 1
                             }]
                         },
                         options: {
                             responsive: true,
-                            maintainAspectRatio: false, // Allows chart to fill container height
+                            maintainAspectRatio: false, 
                             scales: {
                                 y: {
                                     beginAtZero: true,
                                     title: {
                                         display: true,
-                                        text: 'Poäng (Motivation x Förmåga & Möjlighet)'
+                                        text: 'Score (Motivation x Ability & Opportunity)'
                                     }
                                 },
                                 x: {
@@ -632,49 +622,88 @@
                 } catch (e) {
                     console.error("Error initializing Chart.js:", e);
                 }
-            } else {
-                // console.warn("Chart canvas with ID 'forandringspotentialChart' not found within the component. Chart will not render.");
             }
 
             // Navigation scroll highlighting
             const navElement = componentRoot.querySelector('nav');
-            const sections = componentRoot.querySelectorAll('section[id]');
+            const sections = componentRoot.querySelectorAll('section[id]'); // Ensure IDs are unique if multiple components
+            const mainHeader = document.querySelector('.page-header'); 
+            let mainHeaderHeight = 0;
+            if (mainHeader) {
+                mainHeaderHeight = mainHeader.offsetHeight;
+            }
+            if (navElement) {
+                navElement.style.top = mainHeaderHeight + 'px';
+            }
 
             if (navElement && sections && sections.length > 0) {
                 const navLinks = navElement.querySelectorAll('a.nav-link');
 
                 const scrollHandler = () => {
                     let current = '';
+                    const navEffectiveOffset = mainHeaderHeight + navElement.offsetHeight + 30; 
+
                     sections.forEach(section => {
                         const sectionTop = section.offsetTop;
-                        // Adjust offset if nav is sticky and has height, or use Intersection Observer for more accuracy
-                        if (window.pageYOffset >= sectionTop - (navElement.offsetHeight + 20) ) { 
+                        if (window.pageYOffset >= sectionTop - navEffectiveOffset ) { 
                             current = section.getAttribute('id');
                         }
                     });
 
                     navLinks.forEach(link => {
                         link.classList.remove('active');
-                        // Check if href attribute exists and is not empty
                         const href = link.getAttribute('href');
-                        if (href && href.includes(current)) {
+                        if (href && href.includes(current)) { // Ensure current is not empty
                             link.classList.add('active');
                         }
                     });
                 };
                 
-                // Listen to scroll on the window, as the component itself might not be the scroller
                 window.addEventListener('scroll', scrollHandler);
-                
-                // Initial call to set active link on load
-                scrollHandler();
+                scrollHandler(); // Initial call
+            }
+            
+            // Interactive Mockup UI for Hummus Product
+            const quantityInput = componentRoot.querySelector('#hummusQuantityInput_EN'); // Use English ID
+            const dynamicTextElement = componentRoot.querySelector('#hummusDynamicText_EN'); // Use English ID
+            const progressBarElement = componentRoot.querySelector('#hummusProgressBar_EN'); // Use English ID
 
-            } else {
-                // console.warn("Navigation elements (nav or sections) not found within the component. Scrollspy will not function.");
+            if (quantityInput && dynamicTextElement && progressBarElement) {
+                const basePrice = 100; // SEK per pc
+                const discountThreshold = 10; // pcs
+                const discountPrice = 90; // SEK per pc when threshold is met
+
+                function updateHummusMockup() {
+                    let quantity = parseInt(quantityInput.value);
+                    if (isNaN(quantity) || quantity < 0) {
+                        quantity = 0; // Default to 0 if invalid
+                    }
+
+                    let progressPercent = (quantity / discountThreshold) * 100;
+                    if (progressPercent > 100) progressPercent = 100;
+                    progressBarElement.style.width = progressPercent + '%';
+
+                    if (quantity < discountThreshold) {
+                        const needed = discountThreshold - quantity;
+                        const costAtDiscountForThreshold = discountThreshold * discountPrice;
+                        const costWithoutDiscountForThreshold = discountThreshold * basePrice;
+                        const potentialSaving = costWithoutDiscountForThreshold - costAtDiscountForThreshold;
+                        dynamicTextElement.textContent = `Add ${needed} more pcs to reach the next discount level. The price will then be ${discountPrice} SEK/pc, and you'll save ${potentialSaving} SEK in total on your order of ${discountThreshold} pcs!`;
+                    } else {
+                        const actualTotalCost = quantity * discountPrice;
+                        const totalSavingComparedToNoDiscount = (quantity * basePrice) - actualTotalCost;
+                        dynamicTextElement.textContent = `You've reached the highest discount level. You save ${totalSavingComparedToNoDiscount} SEK in total!`;
+                    }
+                }
+
+                quantityInput.addEventListener('input', updateHummusMockup);
+                updateHummusMockup(); // Initial call to set state
             }
 
         })();
         </script>
     </div>
+    </div>
   </div>
 </body>
+</html>
