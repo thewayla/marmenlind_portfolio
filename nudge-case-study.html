@@ -51,6 +51,9 @@
         .text-xs {
           line-height: 1.5rem !important;
         }
+        .text-sm {
+          line-height: 1.75rem !important;
+        }
         .infographic-component {
             font-family: 'Inter', sans-serif;
         }
@@ -157,21 +160,16 @@
             border-radius: 0.25rem; 
             margin-top: 0.5rem; 
             font-weight: 500; 
-            min-height: 50px; /* Added to prevent layout shifts */
+            min-height: 50px;
         }
     </style>
-
-    <!-- 
-      Component's root ID is "infographicComponentRoot_EN". If you use this component multiple times on the same page,
-      ensure to change this ID for each instance for the JavaScript to work correctly.
-      The same applies to the canvas element's ID "potentialChangeChart_EN".
-    -->
     <div class="infographic-component text-gray-800" id="infographicComponentRoot_EN">
 
         <header class="card text-[#004731] p-8 text-center">
             <h1 class="text-4xl font-bold">(Fictional) Nudge Case Study</h1>
-            <p class="text-xl mt-2">Increase Average Order Value (AOV) for Sevan's B2B Customers</p>
-            <p class="text-xl mt-2">Fictional case made for the course "LD1008 Applied Behavioral Science and Learning: Nudging and Decision Making 4.0 hp"</p>
+            <p class="text-xl mt-2 pb-4" style="border-bottom: 2px solid #006A4E;">Increase Average Order Value (AOV) for Sevan's B2B Customers</p>
+            <p class="text-lg mt-2">The fictional case study was conducted according to the framework provided in the course material and instructions. <a class="underline" target="_blank" rel="noreferrer" href="\case 3-5.pdf"><br>Read the instructions here</a>.</p>
+            <p class="text-xs mt-2 underline" style="font-size: 0.75rem;"><a href="https://www.kth.se/student/kurser/kurs/LD1008?l=en" target="_blank" rel="noopener noreferrer">LD1008 – Applied Behavioral Science and Learning: Nudging and Decision Making " (4.0 hp/credits)</a></p>
         </header>
 
         <nav class="sticky top-[124px] bg-white shadow-md z-50 mb-8" style="top: 124px !important;"> 
@@ -185,7 +183,7 @@
             </div>
         </nav>
 
-        <div class="container mx-auto p-4 md:p-8"> 
+        <div class="container mx-auto"> 
             <section id="step1_en" class="mb-12">
                 <h2 class="section-title">Step 1: Create a Behavioral Challenge</h2>
                 <p class="mb-6 text-lg text-gray-700">The first step in the study was to identify and define the central behavioral challenges Sevan faced. This laid the foundation for focusing efforts where the potential for positive change was greatest.</p>
@@ -202,7 +200,7 @@
                         <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
                             <span class="text-4xl">🍲</span>
                             <h4 class="font-semibold text-xl mt-2 text-[#004731]">Recipe Inspiration (Retail)</h4>
-                            <p class="mt-1 text-gray-700">Inspire store consumers via recipes to buy the Sevan products needed.</p>
+                            <p class="mt-1 text-gray-700">Inspire store consumers to buy more Sevan products via recipe recommendations</p>
                         </div>
                         <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
                             <span class="text-4xl">🌍</span>
@@ -240,12 +238,12 @@
                         </div>
                         <div class="stat-card bg-[#004731]">
                             <div class="stat-number">6 Mon</div>
-                            <div class="stat-label">Test Period (Q1-Q2 2026)</div>
+                            <div class="stat-label">Test Period (Q3-Q4 2025)</div>
                         </div>
                     </div>
                     <div class="flow-step">Introduction of a new data-driven recommendation engine on Sevan's B2B e-commerce platform.</div>
                     <div class="flow-arrow">▼</div>
-                    <div class="flow-step">During a 6-month test period (Q1-Q2 2026).</div>
+                    <div class="flow-step">During a 6-month test period (Q3-Q4 2025).</div>
                     <div class="flow-arrow">▼</div>
                     <div class="flow-step">Increase average order value (AOV) by 8% for customers who interact with the recommendations.</div>
                     <div class="flow-arrow">▼</div>
@@ -356,7 +354,7 @@
                 
                 <div class="card">
                     <h3 class="subsection-title">Question 7: GAME Evaluation and Prioritization</h3>
-                    <p class="mb-4 text-gray-600">The nudge interventions were evaluated according to the GAME framework (Goal, Actionable, Measurable, Ethical).</p>
+                    <p class="mb-4 text-gray-600">The nudge interventions were evaluated according to the GAME framework (Genomförbar (Actionable), Användarfokuserad (User oriented), Mätbar (Measurable), Etisk (Ethical)).</p>
                     <div class="overflow-x-auto">
                         <table class="min-w-full bg-white border border-[#A7D7C5]">
                             <thead class="bg-[#006A4E] text-white">
@@ -561,7 +559,7 @@
                             labels: [
                                 wrapLabel('Increase AOV (B2B)', 16), 
                                 wrapLabel('Inspire via Recipes (Retail)', 20), 
-                                wrapLabel('Focus Environmentally Smart (Retail)', 20)  
+                                wrapLabel('Focus on Environmental Properties (Retail)', 20)  
                             ],
                             datasets: [{
                                 label: 'Potential for Change (Score)',
