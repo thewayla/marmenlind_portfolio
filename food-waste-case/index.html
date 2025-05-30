@@ -697,8 +697,8 @@
             if (bestBeforeDateElement && daysLeftTextElement && daysLeftProgressBarElement) {
                 const today = new Date();
                 const futureDate = new Date(today);
-                const daysRemaining = 5; 
-                const maxDaysForBar = 14; 
+                const daysRemaining = 120; 
+                const maxDaysForBar = 365; 
                 futureDate.setDate(today.getDate() + daysRemaining);
 
                 const options = { year: 'numeric', month: 'long', day: 'numeric' };
