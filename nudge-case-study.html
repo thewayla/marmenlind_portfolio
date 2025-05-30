@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olle Marmenlind - Portfolio</title>
+  <meta name="description" content="I’m a creative and problem solver at heart, with a passion to create solutions that work for you. Portfolio of Olle Marmenlind, focusing on product management, UX/UI design, and graphic design.">
+  <meta name="author" content="Olle Marmenlind">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="marmeno-logo-50px.png">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N53RNCM');</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N53RNCM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="page-header">
+    <div class="header-inner-content">
+      <a href="index.html" class="logo">
+        <img src="marmeno-logo.png" alt="Marmenlind logo">
+      </a>
+      <nav class="social-nav" aria-label="Social media and CV links">
+        <a href="olle_marmenlind_cv.pdf" target="_blank" rel="noopener noreferrer" title="Download CV">
+          <img src="resume-7-48.png" alt="CV / Resume icon"></a>
+        <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer" title="Spotify Profile">
+          <img src="Spotify_Primary_Logo_RGB_Black.png" alt="Spotify logo"></a>
+        <a href="https://www.last.fm/user/Way1a" target="_blank" rel="noopener noreferrer" title="Last.fm Profile">
+          <img src="lastfm.png" alt="Last.fm logo"></a>
+        <a href="https://github.com/thewayla" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+          <img src="github.png" alt="GitHub logo"></a>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="wrapper">
+    <div class="mainContent">
+
+
+
+    <style>
+        /* Styles specific to the infographic component */
+        .text-xs {
+          line-height: 1.5rem !important;
+        }
+        .infographic-component {
+            font-family: 'Inter', sans-serif;
+        }
+        .infographic-component .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; 
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; /* Default height */
+            /* max-height: 450px; /* Removed fixed max-height to allow responsiveness from chart.js options */
+        }
+        .infographic-component .flow-step {
+            border: 2px solid #004731; /* primary-dark-green */
+            background-color: #E6F0EB; /* very-light-greenish-grey */
+            color: #1f2937; 
+            padding: 0.75rem; 
+            border-radius: 0.5rem; 
+            text-align: center;
+            margin-bottom: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+        }
+        .infographic-component .flow-arrow {
+            font-size: 1.5rem; 
+            color: #004731; /* primary-dark-green */
+            text-align: center;
+            margin-bottom: 0.5rem; 
+        }
+        .infographic-component .stat-card {
+            background-color: #006A4E; /* medium-green */
+            color: white;
+            padding: 1.5rem; 
+            border-radius: 0.75rem; 
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+        }
+        .infographic-component .stat-number {
+            font-size: 3rem; 
+            font-weight: bold; 
+        }
+        .infographic-component .stat-label {
+            font-size: 1rem; 
+            margin-top: 0.25rem; 
+        }
+        .infographic-component .section-title {
+            font-size: 1.875rem; 
+            font-weight: bold;
+            color: #004731; /* primary-dark-green */
+            margin-bottom: 1rem; 
+            padding-bottom: 0.5rem; 
+            border-bottom: 2px solid #006A4E; /* medium-green */
+        }
+        .infographic-component .subsection-title {
+            font-size: 1.5rem; 
+            font-weight: 600; 
+            color: #006A4E; /* medium-green */
+            margin-top: 1.5rem; 
+            margin-bottom: 0.75rem; 
+        }
+        .infographic-component .card {
+            background-color: white;
+            border-radius: 0.75rem; 
+            padding: 1.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+            margin-bottom: 1.5rem; 
+        }
+        .infographic-component .nav-link {
+            padding: 0.5rem 1rem;
+            color: #004731; /* primary-dark-green */
+            font-weight: 500;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .infographic-component .nav-link:hover {
+            background-color: #A7D7C5; /* light-mint-green */
+            color: #002F1F; /* darker shade of primary for hover text */
+        }
+        .infographic-component .nav-link.active {
+            background-color: #004731; /* primary-dark-green */
+            color: white;
+        }
+        .infographic-component .mock-ui-element {
+            border: 1px dashed #006A4E; /* medium-green */
+            background-color: #F0F7F4; /* Even lighter, almost white with green tint */
+            padding: 1rem;
+            border-radius: 0.375rem; 
+            margin-top: 0.5rem; 
+        }
+        .infographic-component .mock-ui-label {
+            font-size: 0.875rem; 
+            color: #374151; 
+            margin-bottom: 0.25rem; 
+        }
+        .infographic-component .mock-ui-input {
+            border: 1px solid #9CA3AF; 
+            padding: 0.5rem;
+            border-radius: 0.25rem; 
+            width: 60px;
+            text-align: center;
+        }
+        .infographic-component .mock-ui-dynamic-text {
+            background-color: #CFE0D8; /* Muted Light Green */
+            color: #004731; /* primary-dark-green */
+            padding: 0.5rem;
+            border-radius: 0.25rem; 
+            margin-top: 0.5rem; 
+            font-weight: 500; 
+        }
+    </style>
+
+    <!-- 
+      Komponentens rot-ID är "infographicComponentRoot". Om du använder denna komponent flera gånger på samma sida,
+      se till att ändra detta ID för varje instans för att JavaScript ska fungera korrekt.
+      Samma gäller för canvas-elementets ID "forandringspotentialChart".
+    -->
+    <div class="infographic-component bg-gray-50 text-gray-800" id="infographicComponentRoot">
+
+        <header class="bg-[#004731] text-white p-8 text-center">
+            <h1 class="text-4xl font-bold">(Låtsas) Nudge case-study</h1>
+            <p class="text-xl mt-2">Öka Genomsnittligt Ordervärde (AOV) hos Sevans B2B Kunder</p>
+            <p class="text-sm mt-2">Hitte-på case gjord i kursen "LD1008 Tillämpad beteendevetenskap och lärande: Nudging och beslutsfattande 4,0 hp"
+        </header>
+
+        <nav class="sticky top-[100px] bg-white shadow-md z-50 mb-8">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center space-x-2 md:space-x-4 py-3 overflow-x-auto">
+                    <a href="#steg1" class="nav-link">Steg 1</a>
+                    <a href="#steg2" class="nav-link">Steg 2</a>
+                    <a href="#steg3" class="nav-link">Steg 3</a>
+                    <a href="#steg4" class="nav-link">Steg 4</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mx-auto p-4 md:p-8"> <section id="steg1" class="mb-12">
+                <h2 class="section-title">Steg 1: Skapa en Beteendeutmaning</h2>
+                <p class="mb-6 text-lg text-gray-700">Det första steget i studien var att identifiera och definiera de centrala beteendeutmaningarna som Sevan stod inför. Detta lade grunden för att kunna fokusera insatserna där potentialen för positiv förändring var som störst.</p>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 1: Beteendeutmaningar</h3>
+                    <p class="mb-4 text-gray-600">Initialt identifierades tre övergripande utmaningar:</p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
+                            <span class="text-4xl">🛒</span>
+                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">B2B E-handel</h4>
+                            <p class="mt-1 text-gray-700">Få B2B-kunder att lägga till fler kompletterande produkter eller beställa större volymer via datadrivna rekommendationer.</p>
+                        </div>
+                        <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
+                            <span class="text-4xl">🍲</span>
+                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">Receptinspiration (Retail)</h4>
+                            <p class="mt-1 text-gray-700">Inspirera butikskonsumenter via recept att köpa de Sevan-produkter som behövs.</p>
+                        </div>
+                        <div class="bg-[#E6F0EB] p-6 rounded-lg shadow text-center">
+                            <span class="text-4xl">🌍</span>
+                            <h4 class="font-semibold text-xl mt-2 text-[#004731]">Miljösmarta Val (Retail)</h4>
+                            <p class="mt-1 text-gray-700">Få miljömedvetna konsumenter att aktivt välja Sevan genom att tydliggöra 'miljösmarta' egenskaper.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 2: Förändringspotential</h3>
+                    <p class="mb-4 text-gray-600">Utmaningarna utvärderades baserat på användarens motivation samt företagets förmåga och möjlighet att påverka beteendet. Detta gav en poängsumma för att prioritera.</p>
+                    <div class="chart-container h-96 md:h-[450px]">
+                        <canvas id="forandringspotentialChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 text-center">Diagrammet visar den sammanlagda poängen (Motivation x Förmåga & Möjlighet) för varje beteendeutmaning.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 3: Projektmål baserat på Förändringspotential</h3>
+                    <p class="mb-4 text-gray-600">Utmaningen "Öka AOV genom kompletterande produkter/volym (B2B)" valdes på grund av hög potential och bäst mätbarhet.</p>
+                    
+                    <div class="bg-[#D1E7DD] p-6 rounded-lg shadow mb-6">
+                        <h4 class="font-semibold text-xl text-[#004731] mb-2">Vald Beteendeutmaning:</h4>
+                        <blockquote class="text-gray-700 italic border-l-4 border-[#004731] pl-4">
+                            "Hur ska vi få våra B2B-kunder som lägger en order att lägga till fler kompletterande Sevan-produkter eller beställa större volymer baserat på datadrivna och relevanta rekommendationer (t.ex. produktparningar, volymfördelar) under orderläggningsprocessen på vår B2B e-handelsplattform?"
+                        </blockquote>
+                    </div>
+
+                    <h4 class="font-semibold text-xl text-[#004731] mb-3">Konkret Projektmål:</h4>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="stat-card bg-[#004731]"> 
+                            <div class="stat-number">8%</div>
+                            <div class="stat-label">Ökning i AOV (Mål)</div>
+                        </div>
+                        <div class="stat-card bg-[#004731]">
+                            <div class="stat-number">6 Mån</div>
+                            <div class="stat-label">Testperiod (Q1-Q2 2026)</div>
+                        </div>
+                    </div>
+                    <div class="flow-step">Införande av ny datadriven rekommendationsmotor på Sevans B2B e-handelsplattform.</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">Under en 6-månaders testperiod (Q1-Q2 2026).</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">Öka genomsnittligt ordervärde (AOV) med 8% för kunder som interagerar med rekommendationerna.</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">Mäta andelen ordrar som innehåller minst en rekommenderad produkt.</div>
+                </div>
+            </section>
+            
+            <section id="steg2" class="mb-12">
+                <h2 class="section-title">Steg 2: Förstå Användarens Verklighet</h2>
+                <p class="mb-6 text-lg text-gray-700">För att designa effektiva nudges krävdes en djupare förståelse för B2B-kundernas nuvarande beteenden, drivkrafter och hinder i e-handelsmiljön.</p>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 4: Insamlingsmetoder</h3>
+                    <p class="mb-4 text-gray-600">Två primära metoder användes för att samla in data:</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-[#E6F0EB] p-6 rounded-lg border border-[#A7D7C5]">
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">📊</span>Analys av Transaktionsdata (Kvantitativ)</h4>
+                            <p class="text-gray-700">Systematisk analys av orderhistorik, interaktionsdata med rekommendationssystem (klick, konvertering) och kundsegmenteringsdata från B2B-plattformen.</p>
+                            <p class="mt-2 text-sm text-[#004731] font-medium">Motivering: Ger hårda, kvantitativa data på faktiskt köpbeteende och möjliggör A/B-testning.</p>
+                        </div>
+                        <div class="bg-[#E6F0EB] p-6 rounded-lg border border-[#A7D7C5]">
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">🗣️</span>Kvalitativa Intervjuer (Kvalitativ)</h4>
+                            <p class="text-gray-700">Semistrukturerade intervjuer med ett urval av B2B-kunder (inköpsansvariga) för att förstå *varför* bakom deras agerande och upplevelser av systemet.</p>
+                            <p class="mt-2 text-sm text-[#004731] font-medium">Motivering: Ger djupgående insikter om upplevd relevans, hinder och motivationsfaktorer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 5: Beteendeinsikter, Hinder, Motiverare & Beslutssituationer</h3>
+                    <p class="mb-4 text-gray-600">Analysen resulterade i flera nyckelinsikter:</p>
+                    <div class="mb-6 p-4 bg-[#E6F0EB] rounded-lg">
+                        <h4 class="font-semibold text-lg text-[#006A4E] mb-1">Potentiella Beteendeinsikter:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Branschspecifika produktparningar & rekommendationer med tydliga ekonomiska fördelar (t.ex. volymrabatter) kan ha högst konvertering.</li>
+                            <li>Tidsbesparing & upptäckt av genuint relevanta nya produkter uppskattas.</li>
+                            <li>Klick utan köp kan bero på pris, osäkerhet eller att behovet inte är omedelbart.</li>
+                        </ul>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-300">
+                            <h4 class="font-semibold text-lg text-red-700 mb-1"><span class="text-xl mr-1">❗</span>Hinder:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Upplevd irrelevans av rekommendationer.</li>
+                                <li>Misstro mot systemets avsikter.</li>
+                                <li>Rörig användarupplevelse (UX).</li>
+                                <li>Befintliga budget- och inköpsrutiner.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-[#E6F0EB] p-4 rounded-lg border border-[#A7D7C5]">
+                            <h4 class="font-semibold text-lg text-[#004731] mb-1"><span class="text-xl mr-1">👍</span>Motiverare:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Tydlig nytta (tidsbesparing, kostnadsbesparing).</li>
+                                <li>Förenklad beslutsprocess.</li>
+                                <li>Hjälp att tillgodose egna kunders behov.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-[#FEF9C3] p-4 rounded-lg border border-[#FDE047]">
+                        <h4 class="font-semibold text-lg text-[#B45309] mb-1"><span class="text-xl mr-1">🎯</span>Effektiva Beslutssituationer för Rekommendationer:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>När kunder nästan slutfört sin order ("glöm inte"-varor).</li>
+                            <li>När de aktivt väljer nyckelprodukter ("komplettera lösningen med").</li>
+                            <li>När de är nära en förmånsgräns (rabatt, fri frakt).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="steg3" class="mb-12">
+                <h2 class="section-title">Steg 3: Skapa Beteendeinsatser (Nudges)</h2>
+                <p class="mb-6 text-lg text-gray-700">Baserat på insikterna om användarnas verklighet utvecklades flera potentiella nudginginsatser. Dessa utvärderades sedan för att välja den mest lovande.</p>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 6: Potentiella Nudginginsatser</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-[#E6F0EB] p-6 rounded-lg shadow">
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">🎁</span>1. Smarta Paketförslag</h4>
+                            <p class="text-gray-700 mb-2">Presentera genomtänkta produktkombinationer (t.ex. "Komplett Meze-startpaket") när en nyckelprodukt läggs i varukorgen. Kan erbjudas med paketfördel.</p>
+                            <strong class="text-sm text-[#004731]">Nudgeverktyg:</strong>
+                            <ul class="list-disc list-inside text-xs text-gray-600 mt-1">
+                                <li>Rama in informationen ("enkel lösning")</li>
+                                <li>Visa vägen (mot komplett beställning)</li>
+                                <li>Förändra placeringen (relevant tillfälle)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-[#D1E7DD] p-6 rounded-lg shadow ring-2 ring-[#004731]"> 
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">📈</span>2. Volymfördel Synliggjord</h4>
+                            <p class="text-gray-700 mb-2">Synliggör dynamiskt volymrabatter när kund anger antal (t.ex. "Lägg till Y st till för Z% rabatt!"). Pris per enhet uppdateras.</p>
+                            <strong class="text-sm text-[#004731]">Nudgeverktyg:</strong>
+                            <ul class="list-disc list-inside text-xs text-gray-600 mt-1">
+                                <li>Synliggör effekten (ekonomisk fördel)</li>
+                                <li>Ge återkoppling (omedelbar prisändring)</li>
+                                <li>Rama in informationen ("smartare köp")</li>
+                            </ul>
+                        </div>
+                        <div class="bg-[#E6F0EB] p-6 rounded-lg shadow">
+                            <h4 class="font-semibold text-xl text-[#004731] mb-2"><span class="text-2xl mr-2">👍</span>3. Kollektivt Validerade Komplement</h4>
+                            <p class="text-gray-700 mb-2">Visa vilka andra produkter som ofta köps tillsammans av liknande kunder (t.ex. "Restauranger som köpte X beställde ofta Y").</p>
+                            <strong class="text-sm text-[#004731]">Nudgeverktyg:</strong>
+                            <ul class="list-disc list-inside text-xs text-gray-600 mt-1">
+                                <li>Ge socialt bevis</li>
+                                <li>Visa vägen (beprövade kombinationer)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 7: GAME Utvärdering och Prioritering</h3>
+                    <p class="mb-4 text-gray-600">Nudgeinsatserna utvärderades enligt GAME-ramverket (Genomförbarhet, Användarfokuserad, Mätbarhet, Etisk).</p>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-[#A7D7C5]">
+                            <thead class="bg-[#006A4E] text-white">
+                                <tr>
+                                    <th class="py-3 px-4 text-left">Nudgeinsats</th>
+                                    <th class="py-3 px-4 text-center">G</th>
+                                    <th class="py-3 px-4 text-center">A</th>
+                                    <th class="py-3 px-4 text-center">M</th>
+                                    <th class="py-3 px-4 text-center">E</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr class="border-b border-[#C1D8CF]">
+                                    <td class="py-3 px-4">1. Smarta Paketförslag</td>
+                                    <td class="py-3 px-4 text-center bg-yellow-100">Medel</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                </tr>
+                                <tr class="border-b border-[#C1D8CF] bg-[#E6F0EB] font-semibold">
+                                    <td class="py-3 px-4">2. Volymfördel Synliggjord</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                </tr>
+                                <tr class="border-b border-[#C1D8CF]">
+                                    <td class="py-3 px-4">3. Kollektivt Validerade Komplement</td>
+                                    <td class="py-3 px-4 text-center bg-yellow-100">Medel</td>
+                                    <td class="py-3 px-4 text-center bg-orange-100">Medel-Hög</td>
+                                    <td class="py-3 px-4 text-center bg-green-100">Hög</td>
+                                    <td class="py-3 px-4 text-center bg-orange-100">Medel-Hög</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-4 text-gray-600"><strong>Prioritering:</strong> "Volymfördel Synliggjord" (Nudge 2) framstod som starkast, följt av "Smarta Paketförslag" (Nudge 1).</p>
+                </div>
+            </section>
+
+            <section id="steg4" class="mb-12">
+                <h2 class="section-title">Steg 4: Vald Beteendeinsats & Studiedesign</h2>
+                <p class="mb-6 text-lg text-gray-700">Baserat på utvärderingen valdes en specifik nudge för implementering och testning. En detaljerad design och en konkret studieplan formulerades.</p>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 8: Val av Beteendeinsats - "Volymfördel Synliggjord"</h3>
+                    <p class="mb-4 text-gray-600">Denna nudge syftar till att transparent och uppmuntrande visa B2B-kunder hur de kan uppnå bättre priser genom att beställa större volymer.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mb-2">Mock-up: På Produktsidan</h4>
+                            <div class="mock-ui-element">
+                                <div class="mock-ui-label">Produkt: Hummus Klassisk 1kg</div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="mock-ui-label">Antal:</span>
+                                    <input type="number" value="5" class="mock-ui-input">
+                                    <span class="mock-ui-label">st</span>
+                                </div>
+                                <div class="mock-ui-dynamic-text">
+                                    5 st i varukorgen. Lägg till 5 st till för att sänka priset till 90 kr/st och spara 50 kr!
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                                    <div class="bg-[#006A4E] h-2.5 rounded-full" style="width: 50%"></div>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">Progress mot nästa rabattnivå.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mb-2">Mock-up: I Varukorgen</h4>
+                            <div class="mock-ui-element">
+                                <div class="mock-ui-label">Produkt: Olivolja Extra Virgin 5L</div>
+                                <div class="flex items-center">
+                                    <span class="text-2xl text-yellow-500 mr-2">💰</span>
+                                    <p class="mock-ui-dynamic-text text-sm">Spara mer! Nästa prisnivå vid 10 st.</p>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">Klicka för att se detaljer eller ändra antal.</p>
+                            </div>
+                            <div class="mock-ui-element mt-4">
+                                <div class="mock-ui-label font-bold text-[#004731]">Ordersummering</div>
+                                <p class="text-green-600 font-semibold">Du sparar 150 kr genom volymköp!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-x-6">
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mt-4 mb-1">Nyckeldetaljer i Designen:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>Syfte:</strong> Transparent visa prisfördelar vid större volymer.</li>
+                                <li><strong>Interaktionsflöde:</strong> Direkt synlig, omedelbar återkoppling.</li>
+                                <li><strong>Tonalitet:</strong> Positiv, hjälpsam ("Optimera ditt inköp!").</li>
+                                <li><strong>Tekniskt:</strong> Kräver korrekta volymprislistor, frontend-logik.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#006A4E] mt-4 mb-1">Mätpunkter för Framgång (utöver AOV):</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Andel ordrar med volymrabatterat pris.</li>
+                                <li>Genomsnittlig ökning i antal enheter/produkt med volymrabatt.</li>
+                                <li>Klickfrekvens på "visa mer info om rabatt".</li>
+                                <li>Kundfeedback (enkäter) om nytta och tydlighet.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 9: Beskrivning av Mätning</h3>
+                    <p class="mb-4 text-gray-600">Effekten av "Volymfördel Synliggjord"-nudgen kommer att mätas noggrant:</p>
+                    <div class="flow-step"><strong>Primära Mått:</strong><br/>1. Genomsnittlig beställd kvantitet/produktartikel.<br/>2. Andel ordrar som utnyttjar volymrabatt.<br/><em>(Mäts via backend-orderdata)</em></div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step"><strong>Sekundära Mått:</strong><br/>1. Påverkan på total AOV.<br/>2. Interaktionsgrad med nudge-elementet.<br/><em>(Mäts via plattformsloggar)</em></div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step"><strong>Implementering:</strong><br/>Direkt på produktsidor (vid kvantitetsfält) och i varukorgen.</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step"><strong>Utvärdering: A/B-test</strong><br/>Testgrupp (exponeras för nudge) vs. Kontrollgrupp (befintligt gränssnitt).</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step"><strong>Tidsperiod:</strong> 3 månader.</div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">Fråga 10: Hypotes</h3>
+                    <p class="mb-1 text-gray-600">Hypotesen är att nudgen kommer att leda till att B2B-kunder i testgruppen ökar sina beställningsvolymer och oftare utnyttjar volymrabatter.</p>
+                    
+                    <div class="bg-[#D1E7DD] p-6 rounded-lg shadow mb-6 mt-4">
+                        <h4 class="font-semibold text-xl text-[#004731] mb-2 text-center">Specifika Förväntningar (vs. Kontrollgrupp, 3 månader):</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="stat-card bg-[#006A4E]">
+                                <div class="stat-number">&ge;10%</div>
+                                <div class="stat-label">Ökning i genomsnittlig beställd kvantitet (för produkter med nudge)</div>
+                            </div>
+                            <div class="stat-card bg-[#006A4E]">
+                                <div class="stat-number">&ge;5<span class="text-2xl">pp</span></div>
+                                <div class="stat-label">Ökning i andel ordrar som aktiverar volymrabatt</div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-3 text-[#004731] font-medium">En positiv, mätbar effekt på det totala genomsnittliga ordervärdet (AOV) förväntas också.</p>
+                    </div>
+
+                    <h4 class="font-semibold text-lg text-yellow-700 mb-2"><span class="text-2xl mr-2">⚠️</span>Potentiella Faktorer/Confounders:</h4>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
+                            <h5 class="font-semibold text-yellow-600">1. Externa Marknadsförändringar</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-700">
+                                <li>Oväntade skiften i råvarupriser.</li>
+                                <li>Aggressiva kampanjer från konkurrenter.</li>
+                                <li>Signifikanta förändringar i kundernas branscher.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
+                            <h5 class="font-semibold text-yellow-600">2. Andra Samtidiga Sevan-initiativ</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-700">
+                                <li>Andra stora försäljningskampanjer.</li>
+                                <li>Produktlanseringar med egna starka incitament.</li>
+                                <li>Stora ändringar i e-handelsplattformen.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-600">Dessa faktorer kan göra det svårt att isolera den specifika effekten av just "Volymfördel Synliggjord"-nudgen.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <script>
+        (function() {
+            // This IIFE (Immediately Invoked Function Expression) helps to avoid polluting the global scope.
+            
+            // Get the root element of this component. 
+            // Important: If you use multiple instances of this component on the same page, 
+            // ensure "infographicComponentRoot" ID is unique for each, or use a class selector 
+            // and ensure this script is correctly associated with its specific component instance.
+            const componentRoot = document.getElementById('infographicComponentRoot');
+            
+            if (!componentRoot) {
+                // console.error("Infographic component root 'infographicComponentRoot' not found. Scripts cannot run.");
+                // It's possible the script is running before the element is in the DOM if not placed at the end.
+                // Or, if this component is loaded dynamically, ensure this script runs after the component is added.
+                return;
+            }
+
+            // Chart.js initialization
+            const chartElement = componentRoot.querySelector('#forandringspotentialChart');
+            if (chartElement) {
+                const forandringspotentialCtx = chartElement.getContext('2d');
+                
+                function wrapLabel(str, maxWidth) {
+                    if (!str) return ''; // Handle undefined or null strings
+                    if (str.length <= maxWidth) {
+                        return str;
+                    }
+                    const words = str.split(' ');
+                    let currentLine = '';
+                    const lines = [];
+                    for (let word of words) {
+                        if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                            lines.push(currentLine.trim());
+                            currentLine = word + ' ';
+                        } else {
+                            currentLine += word + ' ';
+                        }
+                    }
+                    lines.push(currentLine.trim());
+                    return lines;
+                }
+
+                try {
+                    new Chart(forandringspotentialCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: [
+                                wrapLabel('Öka AOV (B2B)', 16), 
+                                wrapLabel('Inspirera via Recept (Retail)', 20), 
+                                wrapLabel('Fokusera Miljösmart (Retail)', 20)  
+                            ],
+                            datasets: [{
+                                label: 'Förändringspotential (Poäng)',
+                                data: [56, 56, 48],
+                                backgroundColor: [
+                                    '#006A4E', // medium-green
+                                    '#A7D7C5', // light-mint-green
+                                    '#D4A017'  // accent-gold 
+                                ],
+                                borderColor: [
+                                    '#004731', // primary-dark-green
+                                    '#006A4E', // medium-green
+                                    '#A7D7C5'  // light-mint-green
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false, // Allows chart to fill container height
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Poäng (Motivation x Förmåga & Möjlighet)'
+                                    }
+                                },
+                                x: {
+                                    ticks: {
+                                        maxRotation: 0,
+                                        minRotation: 0,
+                                        autoSkip: false, 
+                                    }
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    display: false
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        title: function(tooltipItems) {
+                                            const item = tooltipItems[0];
+                                            if (!item || !item.chart || !item.chart.data || !item.chart.data.labels) return '';
+                                            let label = item.chart.data.labels[item.dataIndex];
+                                            if (Array.isArray(label)) {
+                                                return label.join(' ');
+                                            } else {
+                                                return label;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                } catch (e) {
+                    console.error("Error initializing Chart.js:", e);
+                }
+            } else {
+                // console.warn("Chart canvas with ID 'forandringspotentialChart' not found within the component. Chart will not render.");
+            }
+
+            // Navigation scroll highlighting
+            const navElement = componentRoot.querySelector('nav');
+            const sections = componentRoot.querySelectorAll('section[id]');
+
+            if (navElement && sections && sections.length > 0) {
+                const navLinks = navElement.querySelectorAll('a.nav-link');
+
+                const scrollHandler = () => {
+                    let current = '';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        // Adjust offset if nav is sticky and has height, or use Intersection Observer for more accuracy
+                        if (window.pageYOffset >= sectionTop - (navElement.offsetHeight + 20) ) { 
+                            current = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        // Check if href attribute exists and is not empty
+                        const href = link.getAttribute('href');
+                        if (href && href.includes(current)) {
+                            link.classList.add('active');
+                        }
+                    });
+                };
+                
+                // Listen to scroll on the window, as the component itself might not be the scroller
+                window.addEventListener('scroll', scrollHandler);
+                
+                // Initial call to set active link on load
+                scrollHandler();
+
+            } else {
+                // console.warn("Navigation elements (nav or sections) not found within the component. Scrollspy will not function.");
+            }
+
+        })();
+        </script>
+    </div>
+    </div>
+  </div>
+</body>
