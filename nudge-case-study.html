@@ -25,7 +25,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N53RNCM"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <header class="page-header sticky top-0 bg-white shadow-md z-[60]"> 
+  <header class="page-header">
     <div class="header-inner-content">
       <a href="index.html" class="logo">
         <img src="marmeno-logo.png" alt="Marmenlind logo">
@@ -47,6 +47,14 @@
     <div class="mainContent">
 
     <style>
+        :root {
+            --nav-top: 8rem; /* Adjusted for sticky header */
+        }
+        @media (max-width: 48rem) {
+          :root {
+            --nav-top: 6rem;
+          }
+        }
         /* Styles specific to the infographic component */
         .text-xs {
           line-height: 1.5rem !important;
@@ -168,11 +176,11 @@
         <header class="card text-[#004731] p-8 text-center">
             <h1 class="text-4xl font-bold">(Fictional) Nudge Case Study</h1>
             <p class="text-xl mt-2 pb-4" style="border-bottom: 2px solid #006A4E;">Increase Average Order Value (AOV) for Sevan's B2B Customers</p>
-            <p class="text-lg mt-2">The fictional case study was conducted according to the framework provided in the course material and instructions. <a class="underline" target="_blank" rel="noreferrer" href="\case 3-5.pdf"><br>Read the instructions here</a>.</p>
+            <p class="text-lg mt-2">The fictional case study was conducted according to the framework provided in the course material and instructions. <a class="underline" target="_blank" rel="noreferrer" href="..\case-3-5.pdf"><br>Read the instructions here</a>.</p>
             <p class="text-xs mt-2 underline" style="font-size: 0.75rem;"><a href="https://www.kth.se/student/kurser/kurs/LD1008?l=en" target="_blank" rel="noopener noreferrer">LD1008 – Applied Behavioral Science and Learning: Nudging and Decision Making " (4.0 hp/credits)</a></p>
         </header>
 
-        <nav class="sticky top-[124px] bg-white shadow-md z-50 mb-8" style="top: 124px !important;"> 
+        <nav class="sticky top-[--nav-top] bg-white shadow-md z-50 mb-8"> 
             <div class="container mx-auto px-4">
                 <div class="flex justify-center items-center space-x-2 md:space-x-4 py-3 overflow-x-auto">
                     <a href="#step1_en" class="nav-link">Step 1</a>
@@ -629,9 +637,6 @@
             let mainHeaderHeight = 0;
             if (mainHeader) {
                 mainHeaderHeight = mainHeader.offsetHeight;
-            }
-            if (navElement) {
-                navElement.style.top = mainHeaderHeight + 'px';
             }
 
             if (navElement && sections && sections.length > 0) {

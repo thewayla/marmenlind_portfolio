@@ -19,6 +19,7 @@
   --header-bottom-margin: 3rem;
   --section-bottom-margin: 2rem;
   --element-bottom-margin: 1.5rem;
+  --nav-top: 8rem
 
   --breakpoint-large: 64rem;
   --breakpoint-medium: 48rem;
@@ -311,7 +312,6 @@ main section:last-of-type {
   body {
     --body-padding: 3rem;
   }
-
 }
 
 .contact {
