@@ -175,7 +175,6 @@ main section:last-of-type {
 
 .intro {
   margin-bottom: var(--section-bottom-margin);
-  max-width: 600px;
 }
 
 .intro p {
