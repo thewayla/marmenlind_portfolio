@@ -55,7 +55,7 @@
               <h4>FBG Interrogator</h4>
               <p><strong>C#/.NET + C/FreeRTOS</strong> — <em>Proximion AB</em></p>
               <p>
-                Built a real-time PC host for live spectral visualization and peak analysis, enabling sub-millisecond sensor readout. Engineered a self-hosted Linux CI/CD pipeline using hermetic Docker containers and co-developed firmware for a RISC-V SoC.
+                Architected a preemptive multithreaded system using FreeRTOS on RISC-V with sub-millisecond sensor readout. Engineered a low-latency C#/.NET host utilizing USB Bulk Transfer for visualization, and built a hermetic Linux CI/CD pipeline (Docker) to enforce strict code validation.
               </p>
               <p><em>Closed Source (Industry R&D)</em></p>
             </article>
@@ -66,7 +66,7 @@
               <h4>.NET Sales Catalog Generator</h4>
               <p><strong>C#/.NET</strong> — <em>Sevan AB</em></p>
               <p>
-                Designed a cross-platform desktop tool to automate custom catalog creation. Integrated CSV product data and remote syndication APIs to generate print-ready PDFs, reducing manual effort from hours to under three minutes.
+                Engineered a cross-platform Avalonia UI tool enabling unified deployment from a single codebase. Built an ETL pipeline merging CSVs and REST APIs to render print-ready PDFs programmatically, reducing production time from hours to <3 minutes.
               </p>
               <p><em>Open source release coming soon</em></p>
             </article>
@@ -75,9 +75,9 @@
           <li>
             <article class="card">
               <h4>Sevan B2B Scan-to-Order</h4>
-              <p><strong>Kotlin / Native Android</strong> — <em>Sevan AB</em></p>
+              <p><strong>Android / Kotlin</strong> — <em>Sevan AB</em></p>
               <p>
-                Architected a strict MVVM solution using Kotlin Coroutines and StateFlow. Designed a fault-tolerant data engine with Firestore batch transactions and integrated Google ML Kit for zero-latency on-device barcode processing.
+                Architected a fault-tolerant Android application using Kotlin Coroutines and an offline-first sync engine (Firestore) with atomic transactions. Integrated Google ML Kit for on-device barcode inference to eliminate network dependency in field environments.
               </p>
               <a href="https://github.com/thewayla/Scan2Go_PoC" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">View on GitHub</a>
             </article>
@@ -107,22 +107,20 @@
         </ul>
       <hr>
 
-      <!-- Balanced Layout: Bio/Stack/Ed on Left, Experience on Right -->
       <section class="about-me-container" aria-labelledby="about-me-heading">
         
-        <!-- LEFT COLUMN -->
         <section class="about-me" aria-labelledby="about-heading">
             <h2 id="about-heading">About me</h2>
             <ul>
                 <li>Based in Stockholm, Sweden.</li>
                 <li>I'm an avid music fan and vinyl collector, mostly soul and hip-hop. You can find me on <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer">Spotify</a>.</li>
-                <li>I am a Technical Product Owner, a role I transitioned into from an E-commerce Intern position, all while pursuing my full-time university studies.</li>
+                <li>I am a Technical Product Owner, a role I transitioned into from an E-commerce Intern position, all while pursuing my university studies.</li>
             </ul>
 
             <h3>Technical Stack</h3>
             <ul>
-                <li><strong>Languages:</strong><br> C, Java, C#/.NET, Kotlin</li>
-                <li><strong>Systems:</strong><br> Linux, Docker, FreeRTOS, RISC-V, CI/CD, Real-Time Systems</li>
+                <li><strong>Languages:</strong><br> C, C++, Java, C#/.NET, Kotlin</li>
+                <li><strong>Systems:</strong><br> Linux, Docker, FreeRTOS, RISC-V, CI/CD, Real-Time Systems, Cloud Computing (GCP)</li>
                 <li><strong>Data & Networking:</strong><br> SQL, NoSQL (Firestore, MongoDB), REST, TCP/UDP</li>
                 <li><strong>Tools:</strong><br> Git, CMake, Bash</li>
             </ul>
@@ -134,17 +132,16 @@
             </ul>
         </section>
 
-        <!-- RIGHT COLUMN -->
         <section class="current-focus" aria-labelledby="focus-heading">
             <h2 id="focus-heading">Experience</h2>
             
             <h3>Sevan AB (March 2022 – Present)</h3>
             <p><strong>Product Owner (Technical)</strong></p>
             <ul>
-                <li>Authored technical specifications including API schemas and data models.</li>
-                <li>Defined QA test plans, triaged bugs, and deployed GCP services.</li>
-                <li>Provided technical B2B integration support and built internal documentation libraries.</li>
-                <li>Collaborated cross-functionally to translate business requirements into technical solutions and development priorities.</li>
+                <li>Promoted from Intern to Product Owner; managed full technical lifecycle from initial design to B2B integration and deployment.</li>
+                <li>Translated business requirements into strict technical specs (API schemas), enabling external teams to build scalable, compliant solutions.</li>
+                <li>Established QA protocols and GCP deployment pipelines, ensuring high availability for mission-critical business operations.</li>
+                <li>Authored comprehensive technical documentation library, streamlining onboarding for 20+ developers and stakeholders.</li>
             </ul>
         </section>
       </section>
