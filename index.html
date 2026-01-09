@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olle Marmenlind - Portfolio</title>
-  <meta name="description" content="Portfolio of Olle Marmenlind, a product leader specializing in e-commerce strategy, partnership management, and scaling digital platforms for business growth.">
+  <meta name="description" content="Portfolio of Olle Marmenlind, a Computer Engineering student and Product Owner focused on high-performance systems, real-time embedded software, and scalable .NET architecture.">
   <meta name="author" content="Olle Marmenlind">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="marmeno-logo-50px.png">
@@ -32,7 +32,7 @@
           <img src="resume-7-48.png" alt="CV / Resume icon"></a>
         <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer" title="Spotify Profile">
           <img src="Spotify_Primary_Logo_RGB_Black.png" alt="Spotify logo"></a>
-        <a href="https://github.com/theywayla" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+        <a href="https://github.com/thewayla" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
           <img src="github.png" alt="GitHub logo"></a>
       </nav>
     </div>
@@ -42,46 +42,55 @@
     <main>
       <section class="intro" aria-labelledby="intro-heading">
         <h1 id="intro-heading">Olle Marmenlind</h1>
-        <p>A product leader who builds and scales digital platforms for business growth.</p>
+        <p>Computer Engineering student at KTH focused on high-performance systems, real-time embedded software, and scalable .NET architecture bridging theory with production infrastructure.</p>
       </section>
 
       <hr>
 
       <section class="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Portfolio</h2>
+        <h2 id="projects-heading">Technical Projects</h2>
         <ul class="cards">
           <li>
             <article class="card">
-              <a href="https://sevan.se" target="_blank" rel="noopener noreferrer"><img src="/sevan.png" alt="Sevan logo"></a>
-              <h4><a href="https://sevan.se" target="_blank" rel="noopener noreferrer">Sevan</a> (Product Owner)</h4>
-              <p><time datetime="2022">2022</time> – present</p>
+              <h4>FBG Interrogator</h4>
+              <p><strong>C#/.NET + C/FreeRTOS</strong> — <em>Proximion AB</em></p>
               <p>
-                Took full ownership of the e-commerce initiative, building the company's foundational sales and brand platforms. Led product strategy, managed development partners, and drove internal adoption from concept to launch.
+                Built a real-time PC host for live spectral visualization and peak analysis, enabling sub-millisecond sensor readout. Engineered a self-hosted Linux CI/CD pipeline using hermetic Docker containers and co-developed firmware for a RISC-V SoC.
               </p>
-              <a href="https://www.sevan.se" target="_blank" rel="noopener noreferrer" aria-label="See more about the Sevan website project">See more</a>
+              <p><em>Closed Source (Industry R&D)</em></p>
             </article>
           </li>
           
           <li>
             <article class="card">
-              <a href="/sook/"><img src="/sook.png" alt="SOOK logo"></a>
-              <h4><a href="/sook/">SOOK</a> Menu design</h4>
-              <p><time datetime="2022–10">October 2022</time></p>
+              <h4>.NET Sales Catalog Generator</h4>
+              <p><strong>C#/.NET</strong> — <em>Sevan AB</em></p>
               <p>
-                New 6 screen menu design for Lebanese street food restaurant located in Westfield Mall of Scandinavia, Solna.
+                Designed a cross-platform desktop tool to automate custom catalog creation. Integrated CSV product data and remote syndication APIs to generate print-ready PDFs, reducing manual effort from hours to under three minutes.
               </p>
-              <a href="/sook/" aria-label="See more about the SOOK Menu design project">See more</a>
+              <p><em>Open source release coming soon</em></p>
+            </article>
+          </li>
+
+          <li>
+            <article class="card">
+              <h4>Sevan B2B Scan-to-Order</h4>
+              <p><strong>Kotlin / Native Android</strong> — <em>Sevan AB</em></p>
+              <p>
+                Architected a strict MVVM solution using Kotlin Coroutines and StateFlow. Designed a fault-tolerant data engine with Firestore batch transactions and integrated Google ML Kit for zero-latency on-device barcode processing.
+              </p>
+              <a href="https://github.com/thewayla/Scan2Go_PoC" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">View on GitHub</a>
             </article>
           </li>
         </ul>
 
-        <h3 id="case-study-articles-heading">Case studies, articles, misc</h3>
+        <h3 id="case-study-articles-heading">Case studies & Previous Work</h3>
         <ul class="cards" aria-labelledby="case-study-articles-heading">
           <li>
             <article class="card">
               <h4><a href="ab_testing_principles.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the A/B Testing Report">Technical Report: Principles of Reliable A/B Testing</a></h4>
               <p>
-                A technical framework covering the design and execution of statistically valid A/B tests, from hypothesis formulation to the interpretation of results, ensuring data-informed product decisions.
+                A technical framework covering the design and execution of statistically valid A/B tests, from hypothesis formulation to the interpretation of results.
               </p>
               <a href="ab_testing_principles.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the A/B Testing Report">View report</a>
              </article>
@@ -90,48 +99,54 @@
             <article class="card">
               <h4><a href="/highlight-discount-case/">Case Study: Increasing Average Order Value</a></h4>
               <p>
-                A strategy for applying behavioral science to increase Average Order Value (AOV), demonstrating how data-driven recommendations and clear visualizations can effectively enhance customer orders.
+                A strategy for applying behavioral science to increase Average Order Value (AOV) via data-driven recommendations.
               </p>
               <a href="/highlight-discount-case/" aria-label="View the AOV case study">View case study</a>
             </article>
           </li>
-          <li>
-            <article class="card">
-              <h4><a href="food-waste-case/">Case Study: Reducing Food Waste with Behavioral Science</a></h4>
-              <p>
-                A framework for using strategic nudges to increase sales of products with shorter expiration dates, simultaneously boosting revenue while tackling the critical issue of food waste.
-              </p>
-              <a href="/food-waste-case/" aria-label="View the Food Waste case study">View case study</a>
-            </article>
-          </li>
         </ul>
       <hr>
 
+      <!-- Balanced Layout: Bio/Stack/Ed on Left, Experience on Right -->
       <section class="about-me-container" aria-labelledby="about-me-heading">
+        
+        <!-- LEFT COLUMN -->
         <section class="about-me" aria-labelledby="about-heading">
             <h2 id="about-heading">About me</h2>
             <ul>
-                <li>Based in Stockholm, Sweden</li>
-                <li>I'm an avid music fan and vinyl collector, mostly soul and hip-hop. You can find me on <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer">Spotify</a> or <a href="https://www.last.fm/user/Way1a" target="_blank" rel="noopener noreferrer">last.fm</a></li>
-                <li>Professionally, I'm driven by the process of turning a great idea into a successful digital product</li>
+                <li>Based in Stockholm, Sweden.</li>
+                <li>I'm an avid music fan and vinyl collector, mostly soul and hip-hop. You can find me on <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer">Spotify</a>.</li>
+                <li>I am a Technical Product Owner, a role I transitioned into from an E-commerce Intern position, all while pursuing my full-time university studies.</li>
+            </ul>
+
+            <h3>Technical Stack</h3>
+            <ul>
+                <li><strong>Languages:</strong><br> C, Java, C#/.NET, Kotlin</li>
+                <li><strong>Systems:</strong><br> Linux, Docker, FreeRTOS, RISC-V, CI/CD, Real-Time Systems</li>
+                <li><strong>Data & Networking:</strong><br> SQL, NoSQL (Firestore, MongoDB), REST, TCP/UDP</li>
+                <li><strong>Tools:</strong><br> Git, CMake, Bash</li>
+            </ul>
+
+            <h3>Education</h3>
+            <ul>
+                <li><strong>Royal Institute of Technology (KTH)</strong><br>B.Sc. in Computer Engineering<br>(Expected June 2027)</li>
+                <li><em>Relevant Coursework:</em> Data Structures, Algorithms, Operating Systems, Microcontrollers, Computer Networks, Databases.</li>
             </ul>
         </section>
 
-      <hr>
-
-      <section class="current-focus" aria-labelledby="focus-heading">
-        <h2 id="focus-heading">What I currently do</h2>
-        <h3>For work</h3>
-        <ul>
-          <li>E-commerce Strategy & Growth</li>
-          <li>Partnership Management</li>
-          <li>Product Lifecycle Ownership</li>
-        </ul>
-        <h3>Studying</h3>
-        <ul>
-          <li><a href="https://www.kth.se/student/kurser/program/TIDAA/20232/arskurs1?l=en" target="_blank" rel="noopener noreferrer">Computer Engineering at The Royal Institute of Technology (KTH).</a></li>
-        </ul>
-      </section>
+        <!-- RIGHT COLUMN -->
+        <section class="current-focus" aria-labelledby="focus-heading">
+            <h2 id="focus-heading">Experience</h2>
+            
+            <h3>Sevan AB (March 2022 – Present)</h3>
+            <p><strong>Product Owner (Technical)</strong></p>
+            <ul>
+                <li>Authored technical specifications including API schemas and data models.</li>
+                <li>Defined QA test plans, triaged bugs, and deployed GCP services.</li>
+                <li>Provided technical B2B integration support and built internal documentation libraries.</li>
+                <li>Collaborated cross-functionally to translate business requirements into technical solutions and development priorities.</li>
+            </ul>
+        </section>
       </section>
 
     </main>
@@ -143,7 +158,7 @@
         <h2 id="contact-heading">Contact me</h2>
         <p>Contact me via <a href="mailto:ollemarmenlind02@gmail.com">email</a>.</p>
       </section>
-      <p><small>© <time datetime="2025">2025</time> Olle Marmenlind. All rights reserved.</small></p>
+      <p><small>© <time datetime="2026">2026</time> Olle Marmenlind. All rights reserved.</small></p>
     </footer>
 
   </div>

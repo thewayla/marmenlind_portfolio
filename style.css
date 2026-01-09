@@ -338,13 +338,12 @@ section.about-me-container > section {
 }
 
 @media (min-width: 38rem) {
-  section.about-me-container > section:nth-child(3n) {
+  section.about-me-container > section:last-child {
     border-left: 1px solid var(--color-hr);
     padding-left: var(--card-gap);
     margin-left: var(--card-gap);
   }
 }
-
 
 @media (max-width: 38rem) {
   section.about-me-container {
@@ -352,5 +351,8 @@ section.about-me-container > section {
   }
   section.about-me-container > section {
     flex-basis: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
   }
 }
