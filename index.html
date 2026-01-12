@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olle Marmenlind - Portfolio</title>
-  <meta name="description" content="Portfolio of Olle Marmenlind, a Computer Engineering student and Product Owner focused on high-performance systems, real-time embedded software, and scalable .NET architecture.">
+  <meta name="description"
+    content="Portfolio of Olle Marmenlind, a Computer Engineering undergraduate focused on distributed systems, cloud infrastructure, and real-time embedded solutions.">
   <meta name="author" content="Olle Marmenlind">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="marmeno-logo-50px.png">
 
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N53RNCM');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N53RNCM');</script>
 
 </head>
+
 <body>
 
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N53RNCM"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N53RNCM" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
 
   <header class="page-header">
     <div class="header-inner-content">
@@ -30,7 +36,8 @@
       <nav class="social-nav" aria-label="Social media and CV links">
         <a href="CV_OLLE_MARMENLIND_RESUME.pdf" target="_blank" rel="noopener noreferrer" title="Download CV">
           <img src="resume-7-48.png" alt="CV / Resume icon"></a>
-        <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer" title="Spotify Profile">
+        <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer"
+          title="Spotify Profile">
           <img src="Spotify_Primary_Logo_RGB_Black.png" alt="Spotify logo"></a>
         <a href="https://github.com/thewayla" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
           <img src="github.png" alt="GitHub logo"></a>
@@ -42,7 +49,8 @@
     <main>
       <section class="intro" aria-labelledby="intro-heading">
         <h1 id="intro-heading">Olle Marmenlind</h1>
-        <p>Computer Engineering student at KTH focused on high-performance systems, real-time embedded software, and scalable .NET architecture bridging theory with production infrastructure.</p>
+        <p>Computer Engineering undergraduate at KTH focused on distributed systems, cloud infrastructure, and real-time
+          embedded solutions.</p>
       </section>
 
       <hr>
@@ -55,20 +63,26 @@
               <h4>FBG Interrogator</h4>
               <p><strong>C#/.NET + C/FreeRTOS</strong> — <em>Proximion AB</em></p>
               <p>
-                Architected a preemptive multithreaded system using FreeRTOS on RISC-V with sub-millisecond sensor readout. Engineered a low-latency C#/.NET host utilizing USB Bulk Transfer for visualization, and built a hermetic Linux CI/CD pipeline (Docker) to enforce strict code validation.
+                Collaborated in a 6-person cross-functional team (EE/CE) as the primary developer for the PC-host layers
+                and MCU firmware. Architected a preemptive multithreaded system (FreeRTOS/RISC-V) using binary
+                semaphores to synchronize high-priority ISRs.
+                Engineered a ~$500 4-channel 90Hz prototype matching performance of $10,000+ industrial systems.
+                Developed a C#/.NET host with USB Bulk Transfer for sub-ms sensor readout.
               </p>
               <p><em>Closed Source (Industry R&D)</em></p>
             </article>
           </li>
-          
+
           <li>
             <article class="card">
               <h4>.NET Sales Catalog Generator</h4>
               <p><strong>C#/.NET</strong> — <em>Sevan AB</em></p>
               <p>
-                Engineered a cross-platform Avalonia UI tool enabling unified deployment from a single codebase. Built an ETL pipeline merging CSVs and REST APIs to render print-ready PDFs programmatically, reducing production time from hours to <3 minutes.
-              </p>
-              <p><em>Open source release coming soon</em></p>
+                Developed a cross-platform desktop application using Avalonia UI, enabling unified deployment across
+                Windows, Linux, and macOS. Built an ETL pipeline to ingest CSV datasets and render print-ready PDFs
+                programmatically. Replaced manual design workflows, reducing production time from hours to <3 minutes.
+                  </p>
+                  <p><em>Open source release coming soon</em></p>
             </article>
           </li>
 
@@ -77,9 +91,13 @@
               <h4>B2B Scan-to-Order</h4>
               <p><strong>Android / Kotlin</strong> — <em>Sevan AB</em></p>
               <p>
-                Architected a fault-tolerant Android application using Kotlin Coroutines and an offline-first sync engine (Firestore) with atomic transactions. Integrated Google ML Kit for on-device barcode inference to eliminate network dependency in field environments.
+                Architected a fault-tolerant Android application using Kotlin Coroutines for asynchronous concurrency.
+                Engineered a distributed data synchronization engine with automatic failover strategies
+                (Firestore/REST). Integrated Google ML Kit for on-device barcode inference to enable scanning in
+                low-connectivity environments.
               </p>
-              <a href="https://github.com/thewayla/Scan2Go_PoC" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">View on GitHub</a>
+              <a href="https://github.com/thewayla/Scan2Go_PoC" target="_blank" rel="noopener noreferrer"
+                aria-label="View on GitHub">View on GitHub</a>
             </article>
           </li>
         </ul>
@@ -88,63 +106,76 @@
         <ul class="cards" aria-labelledby="case-study-articles-heading">
           <li>
             <article class="card">
-              <h4><a href="ab_testing_principles.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the A/B Testing Report">Technical Report: Principles of Reliable A/B Testing</a></h4>
+              <h4><a href="ab_testing_principles.pdf" target="_blank" rel="noopener noreferrer"
+                  aria-label="View the A/B Testing Report">Technical Report: Principles of Reliable A/B Testing</a></h4>
               <p>
-                A technical framework covering the design and execution of statistically valid A/B tests, from hypothesis formulation to the interpretation of results.
+                A technical framework covering the design and execution of statistically valid A/B tests, from
+                hypothesis formulation to the interpretation of results.
               </p>
-              <a href="ab_testing_principles.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the A/B Testing Report">View report</a>
-             </article>
+              <a href="ab_testing_principles.pdf" target="_blank" rel="noopener noreferrer"
+                aria-label="View the A/B Testing Report">View report</a>
+            </article>
           </li>
           <li>
             <article class="card">
               <h4><a href="/highlight-discount-case/">Case Study: Increasing Average Order Value</a></h4>
               <p>
-                A strategy for applying behavioral science to increase Average Order Value (AOV) via data-driven recommendations.
+                A strategy for applying behavioral science to increase Average Order Value (AOV) via data-driven
+                recommendations.
               </p>
               <a href="/highlight-discount-case/" aria-label="View the AOV case study">View case study</a>
             </article>
           </li>
         </ul>
-      <hr>
+        <hr>
 
-      <section class="about-me-container" aria-labelledby="about-me-heading">
-        
-        <section class="about-me" aria-labelledby="about-heading">
+        <section class="about-me-container" aria-labelledby="about-me-heading">
+
+          <section class="about-me" aria-labelledby="about-heading">
             <h2 id="about-heading">About me</h2>
             <ul>
-                <li>Based in Stockholm, Sweden.</li>
-                <li>I'm an avid music fan and vinyl collector, mostly soul and hip-hop. You can find me on <a href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank" rel="noopener noreferrer">Spotify</a>.</li>
-                <li>I am a Technical Product Owner, a role I transitioned into from an E-commerce Intern position, all while pursuing my university studies.</li>
+              <li>Based in Stockholm, Sweden.</li>
+              <li>Avid music fan and vinyl collector. Find me on <a
+                  href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank"
+                  rel="noopener noreferrer">Spotify</a>.</li>
+              <li>Technical Product Owner at Sevan AB while pursuing B.Sc. studies.</li>
             </ul>
 
             <h3>Technical Stack</h3>
             <ul>
-                <li><strong>Languages:</strong><br> C, C++, Java, C#/.NET, Kotlin</li>
-                <li><strong>Systems:</strong><br> Linux, Docker, FreeRTOS, RISC-V, CI/CD, Real-Time Systems, Cloud Computing (GCP)</li>
-                <li><strong>Data & Networking:</strong><br> SQL, NoSQL (Firestore, MongoDB), REST, TCP/UDP</li>
-                <li><strong>Tools:</strong><br> Git, CMake, Bash</li>
+              <li><strong>Languages:</strong><br> C, C++, Java, C#/.NET, Kotlin</li>
+              <li><strong>Systems & Infrastructure:</strong><br> Linux, Docker, FreeRTOS, RISC-V, CI/CD, Real-Time
+                Systems, Cloud
+                Computing (GCP/AWS)</li>
+              <li><strong>Data & Networking:</strong><br> SQL, NoSQL (Firestore/MongoDB), REST, TCP/UDP</li>
+              <li><strong>Tools:</strong><br> Git, CMake, YAML/JSON</li>
             </ul>
 
             <h3>Education</h3>
             <ul>
-                <li><strong>Royal Institute of Technology (KTH)</strong><br>B.Sc. in Computer Engineering<br>(Expected June 2027)</li>
-                <li><em>Relevant Coursework:</em> Data Structures, Algorithms, Operating Systems, Microcontrollers, Computer Networks, Databases.</li>
+              <li><strong>Royal Institute of Technology (KTH)</strong><br>B.Sc. in Computer Engineering<br>(Expected
+                June 2027)</li>
+              <li><em>Relevant Coursework:</em> Data Structures, Algorithms, Operating Systems, Microcontrollers,
+                Computer Networks, Databases.</li>
             </ul>
-        </section>
+          </section>
 
-        <section class="current-focus" aria-labelledby="focus-heading">
+          <section class="current-focus" aria-labelledby="focus-heading">
             <h2 id="focus-heading">Experience</h2>
-            
+
             <h3>Sevan AB (March 2022 – Present)</h3>
             <p><strong>Product Owner (Technical)</strong></p>
             <ul>
-                <li>Promoted from Intern to Product Owner; managed full technical lifecycle from initial design to B2B integration and deployment.</li>
-                <li>Translated business requirements into strict technical specs (API schemas), enabling external teams to build scalable, compliant solutions.</li>
-                <li>Established QA protocols and GCP deployment pipelines, ensuring high availability for mission-critical business operations.</li>
-                <li>Authored comprehensive technical documentation library, streamlining onboarding for 20+ developers and stakeholders.</li>
+              <li>Promoted to Product Owner; managed full B2B/B2C technical lifecycles driving 1100% user
+                growth and 50% YoY revenue increase.</li>
+              <li>Directed product roadmap and authored 400+ Jira tickets (including API schemas) to
+                coordinate development across two external partner teams.</li>
+              <li>Architected ERP integrations and automated customer onboarding via make.com,
+                TypeFlow, and Klaviyo, achieving a 90% subscription
+                rate and 59% average open rate.</li>
             </ul>
+          </section>
         </section>
-      </section>
 
     </main>
 
@@ -161,4 +192,5 @@
   </div>
 
 </body>
+
 </html>
