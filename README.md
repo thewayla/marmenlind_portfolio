@@ -2,7 +2,7 @@
 
 Computer Engineering undergraduate at KTH focused on distributed systems, cloud infrastructure, and real-time embedded solutions.
 
-[![CV](https://img.shields.io/badge/CV-Download-blue)](https://marmenlind.com/CV_OLLE_MARMENLIND_RESUME.pdf)
+[![CV](https://img.shields.io/badge/CV-Download-blue)](https://marmenlind.com/assets/docs/CV_OLLE_MARMENLIND_RESUME.pdf)
 [![Spotify](https://img.shields.io/badge/Spotify-Profile-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/user/1162698027?si=64481cfa94ca490b)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github&logoColor=white)](https://github.com/thewayla)
 
@@ -38,7 +38,7 @@ Architected a fault-tolerant Android application using Kotlin Coroutines for str
 ### Technical Report: Principles of Reliable A/B Testing
 A technical framework covering the design and execution of statistically valid A/B tests, from hypothesis formulation to the interpretation of results.
 
-[View report](https://marmenlind.com/ab_testing_principles.pdf)
+[View report](https://marmenlind.com/assets/docs/ab_testing_principles.pdf)
 
 ### Case Study: Increasing Average Order Value
 A strategy for applying behavioral science to increase Average Order Value (AOV) via data-driven recommendations.
